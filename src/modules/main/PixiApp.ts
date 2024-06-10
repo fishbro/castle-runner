@@ -19,10 +19,7 @@ class PixiApp {
 
         // Options for how objects interact
         // How fast the red square moves
-        const movementSpeed = 0.05;
-
-        // Strength of the impulse push between two objects
-        const impulsePower = 2;
+        const movementSpeed = 0.2;
 
         // Test For Hit
         // A basic AABB check between two different squares
@@ -60,24 +57,7 @@ class PixiApp {
                 vCollision.y / distance
             );
 
-            const vRelativeVelocity = new Point(
-                object1.acceleration.x - object2.acceleration.x,
-                object1.acceleration.y - object2.acceleration.y
-            );
-
-            const speed =
-                vRelativeVelocity.x * vCollisionNorm.x +
-                vRelativeVelocity.y * vCollisionNorm.y;
-
-            const impulse =
-                (impulsePower * speed) / (object1.mass + object2.mass);
-
-            console.log(impulse);
-
-            return new Point(
-                impulse * vCollisionNorm.x,
-                impulse * vCollisionNorm.y
-            );
+            return vCollisionNorm;
         }
 
         // Calculate the distance between two given points
@@ -98,12 +78,11 @@ class PixiApp {
             x: 0,
             y: 0,
             acceleration: new Point(0),
-            mass: 5
+            mass: 5000
         });
         app.stage.addChild(redSquare);
-        collisionObjects.push(redSquare);
 
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 50; i++) {
             const randomSquare = new BoxCollider(Texture.WHITE, {
                 width: 20,
                 height: 20,
@@ -116,17 +95,6 @@ class PixiApp {
             app.stage.addChild(randomSquare);
             collisionObjects.push(randomSquare);
         }
-        // const greenSquare = new BoxCollider(Texture.WHITE, {
-        //     width: 100,
-        //     height: 100,
-        //     tint: 0x00ff00,
-        //     x: (app.screen.width - 100) / 2,
-        //     y: (app.screen.height - 100) / 2,
-        //     acceleration: new Point(0),
-        //     mass: 1
-        // });
-        // app.stage.addChild(greenSquare);
-        // collisionObjects.push(greenSquare);
 
         const mouseCoords = { x: 0, y: 0 };
 
@@ -207,53 +175,52 @@ class PixiApp {
             }
 
             //let green square follow the red square
-            // collisionObjects
-            //     .filter(object => object !== redSquare)
-            //     .forEach(greenSquare => {
-            //         const greenSquareCenterPosition = new Point(
-            //             greenSquare.x + greenSquare.width * 0.5,
-            //             greenSquare.y + greenSquare.height * 0.5
-            //         );
-            //
-            //         const toRedSquareDirection = new Point(
-            //             redSquare.x - greenSquareCenterPosition.x,
-            //             redSquare.y - greenSquareCenterPosition.y
-            //         );
-            //
-            //         const angleToRedSquare = Math.atan2(
-            //             toRedSquareDirection.y,
-            //             toRedSquareDirection.x
-            //         );
-            //
-            //         const distRedGreenSquare = distanceBetweenTwoPoints(
-            //             redSquareCenterPosition,
-            //             greenSquareCenterPosition
-            //         );
-            //
-            //         const greenSpeed = distRedGreenSquare * movementSpeed;
-            //
-            //         greenSquare.acceleration.set(
-            //             Math.cos(angleToRedSquare) * greenSpeed,
-            //             Math.sin(angleToRedSquare) * greenSpeed
-            //         );
-            //     });
+            collisionObjects
+                .filter(object => object !== redSquare)
+                .forEach(object1 => {
+                    const greenSquareCenterPosition = new Point(
+                        object1.x + object1.width * 0.5,
+                        object1.y + object1.height * 0.5
+                    );
 
-            collisionObjects.forEach(object1 => {
-                collisionObjects
-                    .filter(object2 => object2 !== object1)
-                    .forEach(object2 => {
-                        if (testForAABB(object1, object2)) {
-                            const collisionPush = collisionResponse(
-                                object1,
-                                object2
-                            );
-                            object2.acceleration.set(
-                                collisionPush.x * object1.mass,
-                                collisionPush.y * object1.mass
-                            );
-                        }
-                    });
-            });
+                    const toRedSquareDirection = new Point(
+                        redSquare.x - greenSquareCenterPosition.x,
+                        redSquare.y - greenSquareCenterPosition.y
+                    );
+
+                    const angleToRedSquare = Math.atan2(
+                        toRedSquareDirection.y,
+                        toRedSquareDirection.x
+                    );
+
+                    const distRedGreenSquare = distanceBetweenTwoPoints(
+                        redSquareCenterPosition,
+                        greenSquareCenterPosition
+                    );
+
+                    const greenSpeed = distRedGreenSquare * movementSpeed;
+
+                    object1.acceleration.set(
+                        Math.cos(angleToRedSquare) * greenSpeed,
+                        Math.sin(angleToRedSquare) * greenSpeed
+                    );
+
+                    collisionObjects
+                        .filter(object2 => object2 !== object1)
+                        .forEach(object2 => {
+                            if (testForAABB(object1, object2)) {
+                                const collisionPush = collisionResponse(
+                                    object1,
+                                    object2
+                                );
+                                // overlapFix(object1, object2);
+                                object2.acceleration.set(
+                                    collisionPush.x * object1.mass,
+                                    collisionPush.y * object1.mass
+                                );
+                            }
+                        });
+                });
         });
     }
 }
