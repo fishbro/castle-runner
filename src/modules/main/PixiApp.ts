@@ -93,8 +93,8 @@ class PixiApp {
             width: 20,
             height: 20,
             tint: 0xff0000,
-            x: 0,
-            y: 0,
+            x: (app.screen.width - 100) / 2,
+            y: (app.screen.height - 100) / 2,
             acceleration: new Point(0),
             mass: 5000
         });
