@@ -122,6 +122,21 @@ class PixiApp {
             mouseCoords.x = event.global.x;
             mouseCoords.y = event.global.y;
         });
+        app.stage.on("mousedown", event => {
+            for (let i = 0; i < 10; i++) {
+                const randomSquare = new BoxCollider(Texture.WHITE, {
+                    width: 20,
+                    height: 20,
+                    tint: 0xffffff,
+                    x: mouseCoords.x - 10,
+                    y: mouseCoords.y - 10,
+                    acceleration: new Point(0),
+                    mass: 1
+                });
+                app.stage.addChild(randomSquare);
+                collisionObjects.push(randomSquare);
+            }
+        });
 
         // Listen for animate update
         app.ticker.add(time => {
