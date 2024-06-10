@@ -19,7 +19,7 @@ class PixiApp {
 
         // Options for how objects interact
         // How fast the red square moves
-        const movementSpeed = 0.2;
+        const movementSpeed = 0.05;
 
         // Test For Hit
         // A basic AABB check between two different squares
@@ -33,6 +33,24 @@ class PixiApp {
                 bounds1.y < bounds2.y + bounds2.height &&
                 bounds1.y + bounds1.height > bounds2.y
             );
+        }
+
+        function testForCircleCollision(
+            object1: BoxCollider,
+            object2: BoxCollider
+        ) {
+            const bounds1 = object1.getBounds();
+            const bounds2 = object2.getBounds();
+
+            // Calculate the distance between the centers of the circles
+            const dx = bounds1.x - bounds2.x;
+            const dy = bounds1.y - bounds2.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            const radius1 = bounds1.width / 2;
+            const radius2 = bounds2.width / 2;
+
+            // Check if the distance is less than the sum of the radii
+            return distance < radius1 + radius2;
         }
 
         // Calculates the results of a collision, allowing us to give an impulse that
@@ -139,41 +157,6 @@ class PixiApp {
                 }
             });
 
-            // If the mouse is off screen, then don't update any further
-            if (
-                app.screen.width > mouseCoords.x ||
-                mouseCoords.x > 0 ||
-                app.screen.height > mouseCoords.y ||
-                mouseCoords.y > 0
-            ) {
-                // Calculate the direction vector between the mouse pointer and
-                // the red square
-                const toMouseDirection = new Point(
-                    mouseCoords.x - redSquareCenterPosition.x,
-                    mouseCoords.y - redSquareCenterPosition.y
-                );
-
-                // Use the above to figure out the angle that direction has
-                const angleToMouse = Math.atan2(
-                    toMouseDirection.y,
-                    toMouseDirection.x
-                );
-
-                // Figure out the speed the square should be travelling by, as a
-                // function of how far away from the mouse pointer the red square is
-                const distMouseRedSquare = distanceBetweenTwoPoints(
-                    mouseCoords as Point,
-                    redSquareCenterPosition
-                );
-                const redSpeed = distMouseRedSquare * movementSpeed;
-
-                // Calculate the acceleration of the red square
-                redSquare.acceleration.set(
-                    Math.cos(angleToMouse) * redSpeed,
-                    Math.sin(angleToMouse) * redSpeed
-                );
-            }
-
             //let green square follow the red square
             collisionObjects
                 .filter(object => object !== redSquare)
@@ -221,6 +204,50 @@ class PixiApp {
                             }
                         });
                 });
+
+            // If the mouse is off screen, then don't update any further
+            if (
+                app.screen.width > mouseCoords.x ||
+                mouseCoords.x > 0 ||
+                app.screen.height > mouseCoords.y ||
+                mouseCoords.y > 0
+            ) {
+                // Calculate the direction vector between the mouse pointer and
+                // the red square
+                const toMouseDirection = new Point(
+                    mouseCoords.x - redSquareCenterPosition.x,
+                    mouseCoords.y - redSquareCenterPosition.y
+                );
+
+                // Use the above to figure out the angle that direction has
+                const angleToMouse = Math.atan2(
+                    toMouseDirection.y,
+                    toMouseDirection.x
+                );
+
+                // Figure out the speed the square should be travelling by, as a
+                // function of how far away from the mouse pointer the red square is
+                const distMouseRedSquare = distanceBetweenTwoPoints(
+                    mouseCoords as Point,
+                    redSquareCenterPosition
+                );
+                const redSpeed = distMouseRedSquare * movementSpeed;
+
+                // Calculate the acceleration of the red square
+                redSquare.acceleration.set(
+                    Math.cos(angleToMouse) * redSpeed,
+                    Math.sin(angleToMouse) * redSpeed
+                );
+
+                collisionObjects.forEach(object => {
+                    object.acceleration.set(
+                        object.acceleration.x +
+                            Math.cos(angleToMouse) * redSpeed,
+                        object.acceleration.y +
+                            Math.sin(angleToMouse) * redSpeed
+                    );
+                });
+            }
         });
     }
 }
