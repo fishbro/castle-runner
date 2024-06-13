@@ -217,49 +217,39 @@ class PixiApp {
                         });
                 });
 
-            // If the mouse is off screen, then don't update any further
-            if (
-                app.screen.width > mouseCoords.x ||
-                mouseCoords.x > 0 ||
-                app.screen.height > mouseCoords.y ||
-                mouseCoords.y > 0
-            ) {
-                // Calculate the direction vector between the mouse pointer and
-                // the red square
-                const toMouseDirection = new Point(
-                    mouseCoords.x - redSquareCenterPosition.x,
-                    mouseCoords.y - redSquareCenterPosition.y
-                );
+            // Calculate the direction vector between the mouse pointer and
+            // the red square
+            const toMouseDirection = new Point(
+                mouseCoords.x - redSquareCenterPosition.x,
+                mouseCoords.y - redSquareCenterPosition.y
+            );
 
-                // Use the above to figure out the angle that direction has
-                const angleToMouse = Math.atan2(
-                    toMouseDirection.y,
-                    toMouseDirection.x
-                );
+            // Use the above to figure out the angle that direction has
+            const angleToMouse = Math.atan2(
+                toMouseDirection.y,
+                toMouseDirection.x
+            );
 
-                // Figure out the speed the square should be travelling by, as a
-                // function of how far away from the mouse pointer the red square is
-                const distMouseRedSquare = distanceBetweenTwoPoints(
-                    mouseCoords as Point,
-                    redSquareCenterPosition
-                );
-                const redSpeed = distMouseRedSquare * movementSpeed;
+            // Figure out the speed the square should be travelling by, as a
+            // function of how far away from the mouse pointer the red square is
+            const distMouseRedSquare = distanceBetweenTwoPoints(
+                mouseCoords as Point,
+                redSquareCenterPosition
+            );
+            const redSpeed = distMouseRedSquare * movementSpeed;
 
-                // Calculate the acceleration of the red square
-                redSquare.acceleration.set(
-                    Math.cos(angleToMouse) * redSpeed,
-                    Math.sin(angleToMouse) * redSpeed
-                );
+            // Calculate the acceleration of the red square
+            redSquare.acceleration.set(
+                Math.cos(angleToMouse) * redSpeed,
+                Math.sin(angleToMouse) * redSpeed
+            );
 
-                collisionObjects.forEach(object => {
-                    object.acceleration.set(
-                        object.acceleration.x +
-                            Math.cos(angleToMouse) * redSpeed,
-                        object.acceleration.y +
-                            Math.sin(angleToMouse) * redSpeed
-                    );
-                });
-            }
+            collisionObjects.forEach(object => {
+                object.acceleration.set(
+                    object.acceleration.x + Math.cos(angleToMouse) * redSpeed,
+                    object.acceleration.y + Math.sin(angleToMouse) * redSpeed
+                );
+            });
         });
     }
 }
