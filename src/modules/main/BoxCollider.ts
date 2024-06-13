@@ -2,10 +2,12 @@ import {
     AnimatedSprite,
     Assets,
     Container,
+    DestroyOptions,
     Point,
     Sprite,
     Texture
 } from "pixi.js";
+import PixiApp from "./PixiApp";
 
 const anim_conf = {
     left: "horde_knight_run_left_45_v01",
@@ -21,6 +23,7 @@ class BoxCollider extends Container<any> {
     boundary: Sprite = new Sprite();
     curAnim: AnimType | null = null;
     animations: Map<AnimType, AnimatedSprite> = new Map();
+    isTarget = false;
 
     constructor(options: {
         width?: number;
@@ -46,18 +49,20 @@ class BoxCollider extends Container<any> {
         this.boundary.tint = options.tint || 0xffffff;
         this.boundary.anchor.set(0.5);
 
+        const { boundary } = this;
+        this.addChild(boundary);
+
         if (options.isTarget) {
+            this.isTarget = true;
             this.boundary.texture = Texture.WHITE;
+        } else {
+            PixiApp.events.emit("addCollisionObject", this);
         }
-        // this.boundary.texture = Texture.WHITE;
 
         this.init();
     }
 
     init() {
-        const { boundary } = this;
-        this.addChild(boundary);
-
         this.addAnimations();
         this.setAnimation("forward");
         // console.log(Assets.get("our").animations["horde_knight_run_v01"]);
@@ -120,6 +125,17 @@ class BoxCollider extends Container<any> {
 
         this.x += this.acceleration.x * delta;
         this.y += this.acceleration.y * delta;
+    }
+
+    destroy(options?: DestroyOptions) {
+        if (!this.isTarget) {
+            PixiApp.events.emit("removeCollisionObject", this);
+        }
+
+        this.boundary.destroy();
+        this.animations.forEach(anim => anim.destroy());
+
+        super.destroy(options);
     }
 }
 

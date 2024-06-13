@@ -1,6 +1,6 @@
 import { Application, Point } from "pixi.js";
 import BoxCollider from "./BoxCollider";
-import Way from "./Way";
+import Way from "../way/Way";
 import EventEmitter from "eventemitter3";
 import {
     collisionResponse,
@@ -9,7 +9,7 @@ import {
 } from "../utils/misc";
 
 class PixiApp {
-    events: EventEmitter = new EventEmitter();
+    static events: EventEmitter = new EventEmitter();
     app: Application = new Application();
     way: Way | null = null;
 
@@ -29,6 +29,7 @@ class PixiApp {
             for (let i = 0; i < before - value; i++) {
                 const last = collisionObjects.pop();
                 if (last) {
+                    last.destroy();
                     app.stage.removeChild(last);
                 }
             }
@@ -38,13 +39,17 @@ class PixiApp {
                     width: soldierSize,
                     height: soldierSize,
                     tint: 0xffffff,
-                    x: Math.random() * app.screen.width,
-                    y: Math.random() * app.screen.height,
+                    x:
+                        (app.screen.width - soldierSize) / 2 +
+                        (1 - Math.random()) * 10,
+                    y:
+                        (app.screen.height - soldierSize) / 2 +
+                        (1 - Math.random()) * 10,
                     acceleration: new Point(0),
                     mass: 1
                 });
                 app.stage.addChild(soldier);
-                collisionObjects.push(soldier);
+                // collisionObjects.push(soldier);
             }
         }
     }
@@ -67,6 +72,12 @@ class PixiApp {
             globalThis.__PIXI_APP__ = app;
             this.way = new Way(app);
             this.soldierSize = app.screen.width / 20;
+
+            PixiApp.events.on("addCollisionObject", this.addCollisionObject);
+            PixiApp.events.on(
+                "removeCollisionObject",
+                this.removeCollisionObject
+            );
 
             this.init();
         });
@@ -239,6 +250,17 @@ class PixiApp {
         this.isGameStarted = true;
         this.way?.start();
     }
+
+    addCollisionObject = (object: BoxCollider) => {
+        this.collisionObjects.push(object);
+    };
+
+    removeCollisionObject = (object: BoxCollider) => {
+        const index = this.collisionObjects.indexOf(object);
+        if (index !== -1) {
+            this.collisionObjects.splice(index, 1);
+        }
+    };
 }
 
 export default PixiApp;
