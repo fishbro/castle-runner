@@ -170,6 +170,9 @@ class PixiApp {
                 app.screen.width * 0.8
             );
         });
+        app.stage.on("mousedown", event => {
+            this.curSoldiers = Math.round(Math.random() * 100);
+        });
 
         // Listen for animate update
         app.ticker.add(time => {
