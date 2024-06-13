@@ -1,0 +1,77 @@
+minigame_defeat.png
+	size: 304, 924
+	filter: Linear, Linear
+	pma: true
+Layer 1
+	bounds: 130, 257, 100, 100
+	offsets: 1, 1, 102, 102
+Layer 49
+	bounds: 2, 15, 43, 34
+	offsets: 2, 5, 51, 45
+корона
+	bounds: 131, 359, 118, 69
+	offsets: 2, 1, 121, 71
+кусочек_1
+	bounds: 105, 3, 48, 16
+	offsets: 1, 2, 51, 19
+кусочек_2
+	bounds: 184, 2, 24, 15
+	offsets: 4, 1, 29, 17
+кусочек_3
+	bounds: 210, 2, 38, 17
+	offsets: 3, 1, 42, 19
+левая_рукоять
+	bounds: 224, 430, 60, 80
+	offsets: 1, 1, 62, 82
+левое_древко_1
+	bounds: 255, 184, 66, 41
+	offsets: 1, 1, 68, 43
+	rotate: 90
+левое_древко_2
+	bounds: 265, 83, 28, 99
+	offsets: 1, 2, 30, 102
+левое_копье
+	bounds: 155, 19, 144, 62
+	offsets: 10, 0, 154, 67
+левый_меч
+	bounds: 150, 430, 72, 102
+	offsets: 2, 1, 76, 104
+плашка
+	bounds: 2, 50, 574, 148
+	offsets: 0, 62, 574, 214
+	rotate: 90
+правая_рукоять
+	bounds: 232, 257, 63, 60
+	offsets: 1, 1, 73, 62
+	rotate: 90
+правое_древко_1
+	bounds: 251, 322, 75, 49
+	offsets: 1, 3, 78, 53
+	rotate: 90
+правое_древко_2
+	bounds: 123, 21, 25, 53
+	offsets: 1, 1, 27, 55
+правое_копье
+	bounds: 150, 62, 107, 81
+	offsets: 1, 1, 111, 84
+правый_меч_1
+	bounds: 53, 10, 45, 50
+	offsets: 2, 1, 51, 52
+	rotate: 90
+правый_меч_2
+	bounds: 155, 6, 26, 11
+	offsets: 1, 1, 28, 13
+правый_меч_3
+	bounds: 250, 2, 38, 51
+	offsets: 1, 1, 40, 53
+	rotate: 90
+флаг
+	bounds: 186, 527, 101, 97
+	offsets: 18, 0, 131, 97
+	rotate: 180
+шлем
+	bounds: 150, 145, 103, 110
+	offsets: 6, 6, 115, 117
+щит
+	bounds: 2, 626, 276, 293
+	offsets: 10, 1, 289, 344

@@ -1,0 +1,426 @@
+spawn_vfx.png
+	size: 1032, 1032
+	filter: Linear, Linear
+	scale: 0.98
+x400
+	bounds: 2, 1027, 1, 1
+x401
+	bounds: 2, 1027, 1, 1
+xgold000
+	bounds: 2, 1027, 1, 1
+xgold001
+	bounds: 2, 1027, 1, 1
+x402
+	bounds: 984, 970, 27, 58
+	offsets: 117, 23, 266, 190
+x403
+	bounds: 412, 526, 81, 135
+	offsets: 88, 23, 266, 190
+x404
+	bounds: 2, 421, 133, 153
+	offsets: 62, 11, 266, 190
+x405
+	bounds: 2, 82, 162, 165
+	offsets: 49, 1, 266, 190
+x406
+	bounds: 815, 175, 179, 163
+	offsets: 40, 0, 266, 190
+x407
+	bounds: 2, 249, 204, 155
+	offsets: 28, 0, 266, 190
+x408
+	bounds: 793, 340, 211, 152
+	offsets: 25, 0, 266, 190
+x409
+	bounds: 351, 364, 213, 148
+	offsets: 25, 0, 266, 190
+x410
+	bounds: 137, 406, 212, 143
+	offsets: 26, 0, 266, 190
+x411
+	bounds: 495, 514, 209, 135
+	offsets: 28, 0, 266, 190
+x412
+	bounds: 2, 576, 197, 107
+	offsets: 34, 4, 266, 190
+x413
+	bounds: 2, 693, 184, 89
+	offsets: 40, 9, 266, 190
+x414
+	bounds: 524, 759, 169, 84
+	offsets: 47, 11, 266, 190
+x415
+	bounds: 695, 751, 152, 87
+	offsets: 55, 13, 266, 190
+x416
+	bounds: 849, 747, 138, 90
+	offsets: 64, 15, 266, 190
+x417
+	bounds: 385, 672, 105, 93
+	offsets: 78, 15, 266, 190
+x418
+	bounds: 53, 986, 44, 42
+	offsets: 105, 72, 266, 190
+x419
+	bounds: 99, 985, 44, 43
+	offsets: 105, 77, 266, 190
+x420
+	bounds: 5, 1008, 20, 20
+	offsets: 112, 83, 266, 190
+x4_parti00
+	bounds: 789, 972, 62, 56
+	offsets: 1, 13, 69, 100
+x4_parti01
+	bounds: 789, 972, 62, 56
+	offsets: 1, 13, 69, 100
+x4_parti25
+	bounds: 789, 972, 62, 56
+	offsets: 1, 13, 69, 100
+x4_parti26
+	bounds: 789, 972, 62, 56
+	offsets: 1, 13, 69, 100
+x4_parti02
+	bounds: 247, 978, 65, 50
+	offsets: 0, 14, 69, 100
+x4_parti27
+	bounds: 247, 978, 65, 50
+	offsets: 0, 14, 69, 100
+x4_parti03
+	bounds: 314, 977, 66, 51
+	offsets: 0, 14, 69, 100
+x4_parti28
+	bounds: 314, 977, 66, 51
+	offsets: 0, 14, 69, 100
+x4_parti04
+	bounds: 653, 973, 66, 55
+	offsets: 0, 12, 69, 100
+x4_parti29
+	bounds: 653, 973, 66, 55
+	offsets: 0, 12, 69, 100
+x4_parti05
+	bounds: 105, 922, 66, 57
+	offsets: 0, 12, 69, 100
+x4_parti30
+	bounds: 105, 922, 66, 57
+	offsets: 0, 12, 69, 100
+x4_parti06
+	bounds: 306, 917, 66, 58
+	offsets: 0, 13, 69, 100
+x4_parti31
+	bounds: 306, 917, 66, 58
+	offsets: 0, 13, 69, 100
+x4_parti07
+	bounds: 709, 912, 66, 59
+	offsets: 0, 13, 69, 100
+x4_parti32
+	bounds: 709, 912, 66, 59
+	offsets: 0, 13, 69, 100
+x4_parti08
+	bounds: 70, 859, 66, 61
+	offsets: 0, 15, 69, 100
+x4_parti33
+	bounds: 70, 859, 66, 61
+	offsets: 0, 15, 69, 100
+x4_parti09
+	bounds: 204, 855, 66, 62
+	offsets: 0, 17, 69, 100
+x4_parti34
+	bounds: 204, 855, 66, 62
+	offsets: 0, 17, 69, 100
+x4_parti10
+	bounds: 722, 841, 66, 68
+	offsets: 0, 14, 69, 100
+x4_parti35
+	bounds: 722, 841, 66, 68
+	offsets: 0, 14, 69, 100
+x4_parti11
+	bounds: 926, 839, 66, 69
+	offsets: 0, 15, 69, 100
+x4_parti36
+	bounds: 926, 839, 66, 69
+	offsets: 0, 15, 69, 100
+x4_parti12
+	bounds: 790, 840, 66, 68
+	offsets: 0, 18, 69, 100
+x4_parti37
+	bounds: 790, 840, 66, 68
+	offsets: 0, 18, 69, 100
+x4_parti13
+	bounds: 200, 780, 67, 73
+	offsets: 0, 15, 69, 100
+x4_parti38
+	bounds: 200, 780, 67, 73
+	offsets: 0, 15, 69, 100
+x4_parti14
+	bounds: 138, 784, 60, 73
+	offsets: 7, 16, 69, 100
+x4_parti39
+	bounds: 138, 784, 60, 73
+	offsets: 7, 16, 69, 100
+x4_parti15
+	bounds: 400, 771, 60, 79
+	offsets: 7, 12, 69, 100
+x4_parti40
+	bounds: 400, 771, 60, 79
+	offsets: 7, 12, 69, 100
+x4_parti16
+	bounds: 517, 974, 66, 54
+	offsets: 1, 12, 69, 100
+x4_parti41
+	bounds: 517, 974, 66, 54
+	offsets: 1, 12, 69, 100
+x4_parti17
+	bounds: 853, 972, 65, 56
+	offsets: 1, 12, 69, 100
+x4_parti42
+	bounds: 853, 972, 65, 56
+	offsets: 1, 12, 69, 100
+x4_parti18
+	bounds: 374, 917, 65, 58
+	offsets: 1, 12, 69, 100
+x4_parti43
+	bounds: 374, 917, 65, 58
+	offsets: 1, 12, 69, 100
+x4_parti19
+	bounds: 844, 910, 65, 60
+	offsets: 1, 13, 69, 100
+x4_parti44
+	bounds: 844, 910, 65, 60
+	offsets: 1, 13, 69, 100
+x4_parti20
+	bounds: 911, 910, 64, 60
+	offsets: 2, 14, 69, 100
+x4_parti45
+	bounds: 911, 910, 64, 60
+	offsets: 2, 14, 69, 100
+x4_parti21
+	bounds: 272, 853, 63, 62
+	offsets: 2, 15, 69, 100
+x4_parti46
+	bounds: 272, 853, 63, 62
+	offsets: 2, 15, 69, 100
+x4_parti22
+	bounds: 173, 922, 63, 57
+	offsets: 2, 16, 69, 100
+x4_parti47
+	bounds: 173, 922, 63, 57
+	offsets: 2, 16, 69, 100
+x4_parti23
+	bounds: 337, 852, 61, 63
+	offsets: 2, 12, 69, 100
+x4_parti48
+	bounds: 337, 852, 61, 63
+	offsets: 2, 12, 69, 100
+x4_parti24
+	bounds: 596, 847, 61, 64
+	offsets: 2, 13, 69, 100
+x4_parti49
+	bounds: 596, 847, 61, 64
+	offsets: 2, 13, 69, 100
+x4_partigold00
+	bounds: 920, 972, 62, 56
+	offsets: 1, 10, 69, 93
+x4_partigold01
+	bounds: 920, 972, 62, 56
+	offsets: 1, 10, 69, 93
+x4_partigold25
+	bounds: 920, 972, 62, 56
+	offsets: 1, 10, 69, 93
+x4_partigold26
+	bounds: 920, 972, 62, 56
+	offsets: 1, 10, 69, 93
+x4_partigold02
+	bounds: 382, 977, 65, 51
+	offsets: 0, 10, 69, 93
+x4_partigold27
+	bounds: 382, 977, 65, 51
+	offsets: 0, 10, 69, 93
+x4_partigold03
+	bounds: 449, 977, 66, 51
+	offsets: 0, 11, 69, 93
+x4_partigold28
+	bounds: 449, 977, 66, 51
+	offsets: 0, 11, 69, 93
+x4_partigold04
+	bounds: 721, 973, 66, 55
+	offsets: 0, 8, 69, 93
+x4_partigold29
+	bounds: 721, 973, 66, 55
+	offsets: 0, 8, 69, 93
+x4_partigold05
+	bounds: 238, 919, 66, 57
+	offsets: 0, 9, 69, 93
+x4_partigold30
+	bounds: 238, 919, 66, 57
+	offsets: 0, 9, 69, 93
+x4_partigold06
+	bounds: 441, 917, 66, 58
+	offsets: 0, 10, 69, 93
+x4_partigold31
+	bounds: 441, 917, 66, 58
+	offsets: 0, 10, 69, 93
+x4_partigold07
+	bounds: 509, 914, 66, 58
+	offsets: 0, 10, 69, 93
+x4_partigold32
+	bounds: 509, 914, 66, 58
+	offsets: 0, 10, 69, 93
+x4_partigold08
+	bounds: 2, 865, 66, 60
+	offsets: 0, 12, 69, 93
+x4_partigold33
+	bounds: 2, 865, 66, 60
+	offsets: 0, 12, 69, 93
+x4_partigold09
+	bounds: 400, 852, 66, 63
+	offsets: 0, 13, 69, 93
+x4_partigold34
+	bounds: 400, 852, 66, 63
+	offsets: 0, 13, 69, 93
+x4_partigold10
+	bounds: 858, 840, 66, 68
+	offsets: 0, 11, 69, 93
+x4_partigold35
+	bounds: 858, 840, 66, 68
+	offsets: 0, 11, 69, 93
+x4_partigold11
+	bounds: 70, 787, 66, 70
+	offsets: 0, 11, 69, 93
+x4_partigold36
+	bounds: 70, 787, 66, 70
+	offsets: 0, 11, 69, 93
+x4_partigold12
+	bounds: 2, 794, 66, 69
+	offsets: 0, 14, 69, 93
+x4_partigold37
+	bounds: 2, 794, 66, 69
+	offsets: 0, 14, 69, 93
+x4_partigold13
+	bounds: 331, 776, 67, 74
+	offsets: 0, 11, 69, 93
+x4_partigold38
+	bounds: 331, 776, 67, 74
+	offsets: 0, 11, 69, 93
+x4_partigold14
+	bounds: 269, 778, 60, 73
+	offsets: 7, 13, 69, 93
+x4_partigold39
+	bounds: 269, 778, 60, 73
+	offsets: 7, 13, 69, 93
+x4_partigold15
+	bounds: 462, 767, 60, 80
+	offsets: 7, 8, 69, 93
+x4_partigold40
+	bounds: 462, 767, 60, 80
+	offsets: 7, 8, 69, 93
+x4_partigold16
+	bounds: 585, 974, 66, 54
+	offsets: 1, 8, 69, 93
+x4_partigold41
+	bounds: 585, 974, 66, 54
+	offsets: 1, 8, 69, 93
+x4_partigold17
+	bounds: 38, 927, 65, 56
+	offsets: 1, 9, 69, 93
+x4_partigold42
+	bounds: 38, 927, 65, 56
+	offsets: 1, 9, 69, 93
+x4_partigold18
+	bounds: 577, 914, 65, 58
+	offsets: 1, 9, 69, 93
+x4_partigold43
+	bounds: 577, 914, 65, 58
+	offsets: 1, 9, 69, 93
+x4_partigold19
+	bounds: 777, 911, 65, 59
+	offsets: 1, 10, 69, 93
+x4_partigold44
+	bounds: 777, 911, 65, 59
+	offsets: 1, 10, 69, 93
+x4_partigold20
+	bounds: 138, 859, 64, 61
+	offsets: 2, 10, 69, 93
+x4_partigold45
+	bounds: 138, 859, 64, 61
+	offsets: 2, 10, 69, 93
+x4_partigold21
+	bounds: 468, 849, 63, 63
+	offsets: 2, 11, 69, 93
+x4_partigold46
+	bounds: 468, 849, 63, 63
+	offsets: 2, 11, 69, 93
+x4_partigold22
+	bounds: 644, 913, 63, 58
+	offsets: 2, 12, 69, 93
+x4_partigold47
+	bounds: 644, 913, 63, 58
+	offsets: 2, 12, 69, 93
+x4_partigold23
+	bounds: 533, 849, 61, 63
+	offsets: 2, 9, 69, 93
+x4_partigold48
+	bounds: 533, 849, 61, 63
+	offsets: 2, 9, 69, 93
+x4_partigold24
+	bounds: 659, 845, 61, 65
+	offsets: 2, 9, 69, 93
+x4_partigold49
+	bounds: 659, 845, 61, 65
+	offsets: 2, 9, 69, 93
+xgold002
+	bounds: 2, 933, 34, 68
+	offsets: 113, 32, 266, 190
+xgold003
+	bounds: 925, 494, 96, 149
+	offsets: 82, 32, 266, 190
+xgold004
+	bounds: 666, 177, 147, 161
+	offsets: 55, 24, 266, 190
+xgold005
+	bounds: 610, 5, 174, 170
+	offsets: 43, 17, 266, 190
+xgold006
+	bounds: 786, 2, 192, 171
+	offsets: 34, 14, 266, 190
+xgold007
+	bounds: 391, 26, 217, 165
+	offsets: 22, 14, 266, 190
+xgold008
+	bounds: 166, 40, 223, 164
+	offsets: 19, 13, 266, 190
+xgold009
+	bounds: 437, 193, 227, 159
+	offsets: 18, 14, 266, 190
+xgold010
+	bounds: 208, 206, 227, 156
+	offsets: 18, 14, 266, 190
+xgold011
+	bounds: 566, 354, 225, 151
+	offsets: 20, 15, 266, 190
+xgold012
+	bounds: 706, 507, 217, 136
+	offsets: 24, 19, 266, 190
+xgold013
+	bounds: 201, 551, 209, 119
+	offsets: 28, 21, 266, 190
+xgold014
+	bounds: 188, 685, 195, 89
+	offsets: 35, 23, 266, 190
+xgold015
+	bounds: 492, 663, 180, 94
+	offsets: 42, 23, 266, 190
+xgold016
+	bounds: 674, 651, 167, 98
+	offsets: 49, 24, 266, 190
+xgold017
+	bounds: 843, 645, 128, 100
+	offsets: 67, 26, 266, 190
+xgold018
+	bounds: 145, 981, 49, 47
+	offsets: 103, 84, 266, 190
+xgold019
+	bounds: 196, 981, 49, 47
+	offsets: 103, 90, 266, 190
+xgold020
+	bounds: 27, 1003, 24, 25
+	offsets: 110, 95, 266, 190

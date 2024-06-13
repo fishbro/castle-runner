@@ -1,21 +1,33 @@
-import { Application, Point, Texture } from "pixi.js";
+import { Application, Assets, Point, Texture } from "pixi.js";
 import BoxCollider from "./BoxCollider";
+import Way from "./Way";
 
 class PixiApp {
-    app: Application;
+    app: Application = new Application();
+    way: Way | null = null;
 
     constructor(frame: HTMLDivElement) {
-        const app = (this.app = new Application());
+        const { app, way } = this;
+        const promises = [];
 
-        app.init({ background: "#000", resizeTo: window }).then(() => {
+        promises.push(app.init({ background: "#000", resizeTo: window }));
+        promises.push(Way.loadTextures());
+
+        Promise.all(promises).then(() => {
             frame.appendChild(app.canvas);
+            //@ts-ignore
+            globalThis.__PIXI_APP__ = app;
+            this.way = new Way(app);
 
             this.init();
         });
     }
 
     init() {
-        const { app } = this;
+        const { app, way } = this;
+
+        if (!way) return;
+        way.init();
 
         // Options for how objects interact
         // How fast the red square moves
@@ -87,14 +99,15 @@ class PixiApp {
         }
 
         const collisionObjects: BoxCollider[] = [];
+        const soldierSize = app.screen.width / 40;
 
         // The square you move around
         const redSquare = new BoxCollider(Texture.WHITE, {
-            width: 20,
-            height: 20,
+            width: soldierSize,
+            height: soldierSize,
             tint: 0xff0000,
-            x: (app.screen.width - 100) / 2,
-            y: (app.screen.height - 100) / 2,
+            x: (app.screen.width - soldierSize) / 2,
+            y: (app.screen.height - soldierSize) / 2,
             acceleration: new Point(0),
             mass: 5000
         });
@@ -102,8 +115,8 @@ class PixiApp {
 
         for (let i = 0; i < 50; i++) {
             const randomSquare = new BoxCollider(Texture.WHITE, {
-                width: 20,
-                height: 20,
+                width: soldierSize,
+                height: soldierSize,
                 tint: 0xffffff,
                 x: Math.random() * app.screen.width,
                 y: Math.random() * app.screen.height,
@@ -114,28 +127,18 @@ class PixiApp {
             collisionObjects.push(randomSquare);
         }
 
-        const mouseCoords = { x: 0, y: 0 };
+        const mouseCoords = {
+            x: app.screen.width / 2,
+            y: app.screen.height / 2
+        };
 
         app.stage.eventMode = "static";
         app.stage.hitArea = app.screen;
         app.stage.on("mousemove", event => {
-            mouseCoords.x = event.global.x;
-            mouseCoords.y = event.global.y;
-        });
-        app.stage.on("mousedown", event => {
-            for (let i = 0; i < 10; i++) {
-                const randomSquare = new BoxCollider(Texture.WHITE, {
-                    width: 20,
-                    height: 20,
-                    tint: 0xffffff,
-                    x: mouseCoords.x - 10,
-                    y: mouseCoords.y - 10,
-                    acceleration: new Point(0),
-                    mass: 1
-                });
-                app.stage.addChild(randomSquare);
-                collisionObjects.push(randomSquare);
-            }
+            mouseCoords.x = Math.min(
+                Math.max(app.screen.width * 0.25, event.global.x),
+                app.screen.width * 0.8
+            );
         });
 
         // Listen for animate update
@@ -144,6 +147,7 @@ class PixiApp {
 
             const redSquareCenterPosition = redSquare.center;
 
+            way.tickerUpdate(delta);
             redSquare.tickerUpdate(delta);
             collisionObjects.forEach(object => {
                 object.tickerUpdate(delta);
@@ -157,18 +161,11 @@ class PixiApp {
                     object.acceleration.y = -object.acceleration.y;
                 }
 
-                // If the green square pops out of the cordon, it pops back into the
-                // middle
-                if (
-                    object.x < -30 ||
-                    object.x > app.screen.width + 30 ||
-                    object.y < -30 ||
-                    object.y > app.screen.height + 30
-                ) {
-                    object.position.set(
-                        (app.screen.width - 100) / 2,
-                        (app.screen.height - 100) / 2
-                    );
+                if (object.x < app.stage.width * 0.2) {
+                    object.x = app.stage.width * 0.2;
+                }
+                if (object.x > app.stage.width * 0.8) {
+                    object.x = app.stage.width * 0.8;
                 }
             });
 

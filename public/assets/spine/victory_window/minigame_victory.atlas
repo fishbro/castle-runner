@@ -1,0 +1,110 @@
+minigame_victory.png
+	size: 448, 1524
+	filter: Linear, Linear
+	pma: true
+__wing
+	bounds: 241, 60, 138, 89
+	offsets: 0, 6, 138, 96
+	rotate: 180
+__wing_2
+	bounds: 15, 46, 139, 89
+	offsets: 0, 6, 139, 96
+	rotate: 180
+elements png/Elements - Sparks 0870
+	bounds: 166, 17, 30, 28
+	offsets: 226, 122, 480, 270
+elements png/Elements - Sparks 0871
+	bounds: 156, 118, 83, 77
+	offsets: 200, 98, 480, 270
+elements png/Elements - Sparks 08710
+	bounds: 2, 371, 148, 151
+	offsets: 166, 62, 480, 270
+elements png/Elements - Sparks 08711
+	bounds: 151, 197, 145, 142
+	offsets: 164, 70, 480, 270
+elements png/Elements - Sparks 08712
+	bounds: 2, 225, 147, 144
+	offsets: 165, 69, 480, 270
+elements png/Elements - Sparks 08713
+	bounds: 298, 235, 132, 104
+	offsets: 177, 75, 480, 270
+elements png/Elements - Sparks 08714
+	bounds: 298, 128, 130, 105
+	offsets: 179, 74, 480, 270
+elements png/Elements - Sparks 08715
+	bounds: 410, 1284, 127, 16
+	offsets: 179, 162, 480, 270
+	rotate: 90
+elements png/Elements - Sparks 08716
+	bounds: 203, 42, 127, 18
+	offsets: 179, 161, 480, 270
+elements png/Elements - Sparks 0873
+	bounds: 176, 341, 193, 192
+	offsets: 142, 38, 480, 270
+elements png/Elements - Sparks 0874
+	bounds: 229, 880, 213, 213
+	offsets: 135, 33, 480, 270
+elements png/Elements - Sparks 0875
+	bounds: 229, 676, 203, 202
+	offsets: 140, 36, 480, 270
+elements png/Elements - Sparks 0877
+	bounds: 2, 869, 224, 225
+	offsets: 128, 23, 480, 270
+	rotate: 90
+elements png/Elements - Sparks 0878
+	bounds: 2, 667, 201, 200
+	offsets: 139, 38, 480, 270
+feather_1
+	bounds: 33, 2, 93, 68
+	offsets: 0, 1, 93, 69
+	rotate: 180
+feather_2
+	bounds: 389, 1411, 77, 50
+	offsets: 0, 0, 80, 50
+	rotate: 90
+feather_3
+	bounds: 389, 1179, 127, 47
+	offsets: 0, 0, 127, 49
+	rotate: 90
+feather_4
+	bounds: 118, 37, 136, 84
+	offsets: 1, 0, 140, 85
+	rotate: 180
+feather__
+	bounds: 75, 7, 91, 32
+	offsets: 3, 0, 94, 32
+left_shape_1
+	bounds: 334, 629, 89, 42
+left_shape_2
+	bounds: 371, 438, 73, 85
+	offsets: 2, 0, 75, 85
+left_shape_3
+	bounds: 321, 8, 45, 44
+left_shape_4
+	bounds: 372, 38, 71, 68
+	offsets: 2, 0, 73, 68
+particles/_sparkle_1
+	bounds: 2, 27, 23, 22
+	offsets: 6, 8, 36, 35
+particles/sparkle_2
+	bounds: 2, 19, 6, 6
+	offsets: 2, 2, 10, 10
+shape_ center
+	bounds: 8, 523, 430, 160
+	offsets: 0, 74, 430, 234
+	rotate: 180
+shine/shine2
+	bounds: 2, 1095, 195, 425
+	offsets: 214, 61, 620, 540
+shine/shine3
+	bounds: 199, 1095, 188, 425
+	offsets: 218, 61, 620, 540
+tongue_1
+	bounds: 2, 111, 112, 154
+	offsets: 1, 1, 113, 156
+	rotate: 90
+tongue_2
+	bounds: 391, 340, 40, 110
+tongue_3
+	bounds: 389, 1095, 39, 110
+	offsets: 1, 0, 40, 110

@@ -1,0 +1,1844 @@
+{"frames": {
+
+"horde_enemy_attack_v01_00000.png":
+{
+	"frame": {"x":0,"y":0,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00001.png":
+{
+	"frame": {"x":100,"y":0,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00002.png":
+{
+	"frame": {"x":200,"y":0,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00003.png":
+{
+	"frame": {"x":300,"y":0,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00004.png":
+{
+	"frame": {"x":400,"y":0,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00005.png":
+{
+	"frame": {"x":500,"y":0,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00006.png":
+{
+	"frame": {"x":600,"y":0,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00007.png":
+{
+	"frame": {"x":700,"y":0,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00008.png":
+{
+	"frame": {"x":800,"y":0,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00009.png":
+{
+	"frame": {"x":900,"y":0,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00010.png":
+{
+	"frame": {"x":1000,"y":0,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00011.png":
+{
+	"frame": {"x":1100,"y":0,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00012.png":
+{
+	"frame": {"x":1200,"y":0,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00013.png":
+{
+	"frame": {"x":1300,"y":0,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00014.png":
+{
+	"frame": {"x":1400,"y":0,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00015.png":
+{
+	"frame": {"x":1500,"y":0,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00016.png":
+{
+	"frame": {"x":1600,"y":0,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00017.png":
+{
+	"frame": {"x":1700,"y":0,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00018.png":
+{
+	"frame": {"x":1800,"y":0,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00019.png":
+{
+	"frame": {"x":0,"y":120,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00020.png":
+{
+	"frame": {"x":100,"y":120,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00021.png":
+{
+	"frame": {"x":200,"y":120,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00022.png":
+{
+	"frame": {"x":300,"y":120,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00023.png":
+{
+	"frame": {"x":400,"y":120,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00024.png":
+{
+	"frame": {"x":500,"y":120,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00025.png":
+{
+	"frame": {"x":600,"y":120,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00026.png":
+{
+	"frame": {"x":700,"y":120,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00027.png":
+{
+	"frame": {"x":800,"y":120,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00028.png":
+{
+	"frame": {"x":900,"y":120,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00029.png":
+{
+	"frame": {"x":1000,"y":120,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00030.png":
+{
+	"frame": {"x":1100,"y":120,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00031.png":
+{
+	"frame": {"x":1200,"y":120,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00032.png":
+{
+	"frame": {"x":1300,"y":120,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00033.png":
+{
+	"frame": {"x":1400,"y":120,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00034.png":
+{
+	"frame": {"x":1500,"y":120,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00035.png":
+{
+	"frame": {"x":1600,"y":120,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00036.png":
+{
+	"frame": {"x":1700,"y":120,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00037.png":
+{
+	"frame": {"x":1800,"y":120,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00038.png":
+{
+	"frame": {"x":0,"y":240,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00039.png":
+{
+	"frame": {"x":100,"y":240,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00040.png":
+{
+	"frame": {"x":200,"y":240,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00041.png":
+{
+	"frame": {"x":300,"y":240,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00042.png":
+{
+	"frame": {"x":400,"y":240,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00043.png":
+{
+	"frame": {"x":500,"y":240,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_attack_v01_00044.png":
+{
+	"frame": {"x":600,"y":240,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00000.png":
+{
+	"frame": {"x":700,"y":240,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00001.png":
+{
+	"frame": {"x":800,"y":240,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00002.png":
+{
+	"frame": {"x":900,"y":240,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00003.png":
+{
+	"frame": {"x":1000,"y":240,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00004.png":
+{
+	"frame": {"x":1100,"y":240,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00005.png":
+{
+	"frame": {"x":1200,"y":240,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00006.png":
+{
+	"frame": {"x":1300,"y":240,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00007.png":
+{
+	"frame": {"x":1400,"y":240,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00008.png":
+{
+	"frame": {"x":1500,"y":240,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00009.png":
+{
+	"frame": {"x":1600,"y":240,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00010.png":
+{
+	"frame": {"x":1700,"y":240,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00011.png":
+{
+	"frame": {"x":1800,"y":240,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00012.png":
+{
+	"frame": {"x":0,"y":360,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00013.png":
+{
+	"frame": {"x":100,"y":360,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00014.png":
+{
+	"frame": {"x":200,"y":360,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00015.png":
+{
+	"frame": {"x":300,"y":360,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00016.png":
+{
+	"frame": {"x":400,"y":360,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00017.png":
+{
+	"frame": {"x":500,"y":360,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00018.png":
+{
+	"frame": {"x":600,"y":360,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00019.png":
+{
+	"frame": {"x":700,"y":360,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00020.png":
+{
+	"frame": {"x":800,"y":360,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00021.png":
+{
+	"frame": {"x":900,"y":360,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00022.png":
+{
+	"frame": {"x":1000,"y":360,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00023.png":
+{
+	"frame": {"x":1100,"y":360,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00024.png":
+{
+	"frame": {"x":1200,"y":360,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00025.png":
+{
+	"frame": {"x":1300,"y":360,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00026.png":
+{
+	"frame": {"x":1400,"y":360,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00027.png":
+{
+	"frame": {"x":1500,"y":360,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00028.png":
+{
+	"frame": {"x":1600,"y":360,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00029.png":
+{
+	"frame": {"x":1700,"y":360,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00030.png":
+{
+	"frame": {"x":1800,"y":360,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00031.png":
+{
+	"frame": {"x":0,"y":480,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00032.png":
+{
+	"frame": {"x":100,"y":480,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00033.png":
+{
+	"frame": {"x":200,"y":480,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00034.png":
+{
+	"frame": {"x":300,"y":480,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00035.png":
+{
+	"frame": {"x":400,"y":480,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00036.png":
+{
+	"frame": {"x":500,"y":480,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00037.png":
+{
+	"frame": {"x":600,"y":480,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00038.png":
+{
+	"frame": {"x":700,"y":480,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00039.png":
+{
+	"frame": {"x":800,"y":480,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00040.png":
+{
+	"frame": {"x":900,"y":480,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00041.png":
+{
+	"frame": {"x":1000,"y":480,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00042.png":
+{
+	"frame": {"x":1100,"y":480,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00043.png":
+{
+	"frame": {"x":1200,"y":480,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00044.png":
+{
+	"frame": {"x":1300,"y":480,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00045.png":
+{
+	"frame": {"x":1400,"y":480,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00046.png":
+{
+	"frame": {"x":1500,"y":480,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00047.png":
+{
+	"frame": {"x":1600,"y":480,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00048.png":
+{
+	"frame": {"x":1700,"y":480,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00049.png":
+{
+	"frame": {"x":1800,"y":480,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00050.png":
+{
+	"frame": {"x":0,"y":600,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00051.png":
+{
+	"frame": {"x":100,"y":600,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00052.png":
+{
+	"frame": {"x":200,"y":600,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00053.png":
+{
+	"frame": {"x":300,"y":600,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00054.png":
+{
+	"frame": {"x":400,"y":600,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00055.png":
+{
+	"frame": {"x":500,"y":600,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00056.png":
+{
+	"frame": {"x":600,"y":600,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00057.png":
+{
+	"frame": {"x":700,"y":600,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00058.png":
+{
+	"frame": {"x":800,"y":600,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00059.png":
+{
+	"frame": {"x":900,"y":600,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00060.png":
+{
+	"frame": {"x":1000,"y":600,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00061.png":
+{
+	"frame": {"x":1100,"y":600,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00062.png":
+{
+	"frame": {"x":1200,"y":600,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00063.png":
+{
+	"frame": {"x":1300,"y":600,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_death_v01_00064.png":
+{
+	"frame": {"x":1400,"y":600,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00000.png":
+{
+	"frame": {"x":1500,"y":600,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00001.png":
+{
+	"frame": {"x":1600,"y":600,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00002.png":
+{
+	"frame": {"x":1700,"y":600,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00003.png":
+{
+	"frame": {"x":1800,"y":600,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00004.png":
+{
+	"frame": {"x":0,"y":720,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00005.png":
+{
+	"frame": {"x":100,"y":720,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00006.png":
+{
+	"frame": {"x":200,"y":720,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00007.png":
+{
+	"frame": {"x":300,"y":720,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00008.png":
+{
+	"frame": {"x":400,"y":720,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00009.png":
+{
+	"frame": {"x":500,"y":720,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00010.png":
+{
+	"frame": {"x":600,"y":720,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00011.png":
+{
+	"frame": {"x":700,"y":720,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00012.png":
+{
+	"frame": {"x":800,"y":720,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00013.png":
+{
+	"frame": {"x":900,"y":720,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00014.png":
+{
+	"frame": {"x":1000,"y":720,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00015.png":
+{
+	"frame": {"x":1100,"y":720,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00016.png":
+{
+	"frame": {"x":1200,"y":720,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00017.png":
+{
+	"frame": {"x":1300,"y":720,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00018.png":
+{
+	"frame": {"x":1400,"y":720,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00019.png":
+{
+	"frame": {"x":1500,"y":720,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00020.png":
+{
+	"frame": {"x":1600,"y":720,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00021.png":
+{
+	"frame": {"x":1700,"y":720,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00022.png":
+{
+	"frame": {"x":1800,"y":720,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00023.png":
+{
+	"frame": {"x":0,"y":840,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00024.png":
+{
+	"frame": {"x":100,"y":840,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00025.png":
+{
+	"frame": {"x":200,"y":840,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00026.png":
+{
+	"frame": {"x":300,"y":840,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00027.png":
+{
+	"frame": {"x":400,"y":840,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00028.png":
+{
+	"frame": {"x":500,"y":840,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00029.png":
+{
+	"frame": {"x":600,"y":840,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00030.png":
+{
+	"frame": {"x":700,"y":840,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00031.png":
+{
+	"frame": {"x":800,"y":840,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00032.png":
+{
+	"frame": {"x":900,"y":840,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00033.png":
+{
+	"frame": {"x":1000,"y":840,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00034.png":
+{
+	"frame": {"x":1100,"y":840,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00035.png":
+{
+	"frame": {"x":1200,"y":840,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00036.png":
+{
+	"frame": {"x":1300,"y":840,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00037.png":
+{
+	"frame": {"x":1400,"y":840,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00038.png":
+{
+	"frame": {"x":1500,"y":840,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00039.png":
+{
+	"frame": {"x":1600,"y":840,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00040.png":
+{
+	"frame": {"x":1700,"y":840,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00041.png":
+{
+	"frame": {"x":1800,"y":840,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00042.png":
+{
+	"frame": {"x":0,"y":960,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00043.png":
+{
+	"frame": {"x":100,"y":960,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00044.png":
+{
+	"frame": {"x":200,"y":960,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00045.png":
+{
+	"frame": {"x":300,"y":960,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00046.png":
+{
+	"frame": {"x":400,"y":960,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00047.png":
+{
+	"frame": {"x":500,"y":960,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00048.png":
+{
+	"frame": {"x":600,"y":960,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00049.png":
+{
+	"frame": {"x":700,"y":960,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00050.png":
+{
+	"frame": {"x":800,"y":960,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00051.png":
+{
+	"frame": {"x":900,"y":960,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00052.png":
+{
+	"frame": {"x":1000,"y":960,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00053.png":
+{
+	"frame": {"x":1100,"y":960,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_idle_v01_00054.png":
+{
+	"frame": {"x":1200,"y":960,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_left_45_v01_00000.png":
+{
+	"frame": {"x":1300,"y":960,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_left_45_v01_00001.png":
+{
+	"frame": {"x":1400,"y":960,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_left_45_v01_00002.png":
+{
+	"frame": {"x":1500,"y":960,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_left_45_v01_00003.png":
+{
+	"frame": {"x":1600,"y":960,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_left_45_v01_00004.png":
+{
+	"frame": {"x":1700,"y":960,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_left_45_v01_00005.png":
+{
+	"frame": {"x":1800,"y":960,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_left_45_v01_00006.png":
+{
+	"frame": {"x":0,"y":1080,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_left_45_v01_00007.png":
+{
+	"frame": {"x":100,"y":1080,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_left_45_v01_00008.png":
+{
+	"frame": {"x":200,"y":1080,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_left_45_v01_00009.png":
+{
+	"frame": {"x":300,"y":1080,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_left_45_v01_00010.png":
+{
+	"frame": {"x":400,"y":1080,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_left_45_v01_00011.png":
+{
+	"frame": {"x":500,"y":1080,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_left_45_v01_00012.png":
+{
+	"frame": {"x":600,"y":1080,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_left_45_v01_00013.png":
+{
+	"frame": {"x":700,"y":1080,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_left_45_v01_00014.png":
+{
+	"frame": {"x":800,"y":1080,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_left_45_v01_00015.png":
+{
+	"frame": {"x":900,"y":1080,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_left_45_v01_00016.png":
+{
+	"frame": {"x":1000,"y":1080,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_left_45_v01_00017.png":
+{
+	"frame": {"x":1100,"y":1080,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_left_45_v01_00018.png":
+{
+	"frame": {"x":1200,"y":1080,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_left_45_v01_00019.png":
+{
+	"frame": {"x":1300,"y":1080,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_left_45_v01_00020.png":
+{
+	"frame": {"x":1400,"y":1080,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_right_45_v01_00000.png":
+{
+	"frame": {"x":1500,"y":1080,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_right_45_v01_00001.png":
+{
+	"frame": {"x":1600,"y":1080,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_right_45_v01_00002.png":
+{
+	"frame": {"x":1700,"y":1080,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_right_45_v01_00003.png":
+{
+	"frame": {"x":1800,"y":1080,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_right_45_v01_00004.png":
+{
+	"frame": {"x":0,"y":1200,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_right_45_v01_00005.png":
+{
+	"frame": {"x":100,"y":1200,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_right_45_v01_00006.png":
+{
+	"frame": {"x":200,"y":1200,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_right_45_v01_00007.png":
+{
+	"frame": {"x":300,"y":1200,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_right_45_v01_00008.png":
+{
+	"frame": {"x":400,"y":1200,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_right_45_v01_00009.png":
+{
+	"frame": {"x":500,"y":1200,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_right_45_v01_00010.png":
+{
+	"frame": {"x":600,"y":1200,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_right_45_v01_00011.png":
+{
+	"frame": {"x":700,"y":1200,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_right_45_v01_00012.png":
+{
+	"frame": {"x":800,"y":1200,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_right_45_v01_00013.png":
+{
+	"frame": {"x":900,"y":1200,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_right_45_v01_00014.png":
+{
+	"frame": {"x":1000,"y":1200,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_right_45_v01_00015.png":
+{
+	"frame": {"x":1100,"y":1200,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_right_45_v01_00016.png":
+{
+	"frame": {"x":1200,"y":1200,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_right_45_v01_00017.png":
+{
+	"frame": {"x":1300,"y":1200,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_right_45_v01_00018.png":
+{
+	"frame": {"x":1400,"y":1200,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_right_45_v01_00019.png":
+{
+	"frame": {"x":1500,"y":1200,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_right_45_v01_00020.png":
+{
+	"frame": {"x":1600,"y":1200,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_v01_00000.png":
+{
+	"frame": {"x":1700,"y":1200,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_v01_00001.png":
+{
+	"frame": {"x":1800,"y":1200,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_v01_00002.png":
+{
+	"frame": {"x":0,"y":1320,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_v01_00003.png":
+{
+	"frame": {"x":100,"y":1320,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_v01_00004.png":
+{
+	"frame": {"x":200,"y":1320,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_v01_00005.png":
+{
+	"frame": {"x":300,"y":1320,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_v01_00006.png":
+{
+	"frame": {"x":400,"y":1320,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_v01_00007.png":
+{
+	"frame": {"x":500,"y":1320,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_v01_00008.png":
+{
+	"frame": {"x":600,"y":1320,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_v01_00009.png":
+{
+	"frame": {"x":700,"y":1320,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_v01_00010.png":
+{
+	"frame": {"x":800,"y":1320,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_v01_00011.png":
+{
+	"frame": {"x":900,"y":1320,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_v01_00012.png":
+{
+	"frame": {"x":1000,"y":1320,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_v01_00013.png":
+{
+	"frame": {"x":1100,"y":1320,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_v01_00014.png":
+{
+	"frame": {"x":1200,"y":1320,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_v01_00015.png":
+{
+	"frame": {"x":1300,"y":1320,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_v01_00016.png":
+{
+	"frame": {"x":1400,"y":1320,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_v01_00017.png":
+{
+	"frame": {"x":1500,"y":1320,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_v01_00018.png":
+{
+	"frame": {"x":1600,"y":1320,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_v01_00019.png":
+{
+	"frame": {"x":1700,"y":1320,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+},
+"horde_enemy_run_v01_00020.png":
+{
+	"frame": {"x":1800,"y":1320,"w":100,"h":120},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":120},
+	"sourceSize": {"w":100,"h":120}
+}},
+"animations": {
+	"horde_enemy_attack_v01": ["horde_enemy_attack_v01_00000.png","horde_enemy_attack_v01_00001.png","horde_enemy_attack_v01_00002.png","horde_enemy_attack_v01_00003.png","horde_enemy_attack_v01_00004.png","horde_enemy_attack_v01_00005.png","horde_enemy_attack_v01_00006.png","horde_enemy_attack_v01_00007.png","horde_enemy_attack_v01_00008.png","horde_enemy_attack_v01_00009.png","horde_enemy_attack_v01_00010.png","horde_enemy_attack_v01_00011.png","horde_enemy_attack_v01_00012.png","horde_enemy_attack_v01_00013.png","horde_enemy_attack_v01_00014.png","horde_enemy_attack_v01_00015.png","horde_enemy_attack_v01_00016.png","horde_enemy_attack_v01_00017.png","horde_enemy_attack_v01_00018.png","horde_enemy_attack_v01_00019.png","horde_enemy_attack_v01_00020.png","horde_enemy_attack_v01_00021.png","horde_enemy_attack_v01_00022.png","horde_enemy_attack_v01_00023.png","horde_enemy_attack_v01_00024.png","horde_enemy_attack_v01_00025.png","horde_enemy_attack_v01_00026.png","horde_enemy_attack_v01_00027.png","horde_enemy_attack_v01_00028.png","horde_enemy_attack_v01_00029.png","horde_enemy_attack_v01_00030.png","horde_enemy_attack_v01_00031.png","horde_enemy_attack_v01_00032.png","horde_enemy_attack_v01_00033.png","horde_enemy_attack_v01_00034.png","horde_enemy_attack_v01_00035.png","horde_enemy_attack_v01_00036.png","horde_enemy_attack_v01_00037.png","horde_enemy_attack_v01_00038.png","horde_enemy_attack_v01_00039.png","horde_enemy_attack_v01_00040.png","horde_enemy_attack_v01_00041.png","horde_enemy_attack_v01_00042.png","horde_enemy_attack_v01_00043.png","horde_enemy_attack_v01_00044.png"],
+	"horde_enemy_death_v01": ["horde_enemy_death_v01_00000.png","horde_enemy_death_v01_00001.png","horde_enemy_death_v01_00002.png","horde_enemy_death_v01_00003.png","horde_enemy_death_v01_00004.png","horde_enemy_death_v01_00005.png","horde_enemy_death_v01_00006.png","horde_enemy_death_v01_00007.png","horde_enemy_death_v01_00008.png","horde_enemy_death_v01_00009.png","horde_enemy_death_v01_00010.png","horde_enemy_death_v01_00011.png","horde_enemy_death_v01_00012.png","horde_enemy_death_v01_00013.png","horde_enemy_death_v01_00014.png","horde_enemy_death_v01_00015.png","horde_enemy_death_v01_00016.png","horde_enemy_death_v01_00017.png","horde_enemy_death_v01_00018.png","horde_enemy_death_v01_00019.png","horde_enemy_death_v01_00020.png","horde_enemy_death_v01_00021.png","horde_enemy_death_v01_00022.png","horde_enemy_death_v01_00023.png","horde_enemy_death_v01_00024.png","horde_enemy_death_v01_00025.png","horde_enemy_death_v01_00026.png","horde_enemy_death_v01_00027.png","horde_enemy_death_v01_00028.png","horde_enemy_death_v01_00029.png","horde_enemy_death_v01_00030.png","horde_enemy_death_v01_00031.png","horde_enemy_death_v01_00032.png","horde_enemy_death_v01_00033.png","horde_enemy_death_v01_00034.png","horde_enemy_death_v01_00035.png","horde_enemy_death_v01_00036.png","horde_enemy_death_v01_00037.png","horde_enemy_death_v01_00038.png","horde_enemy_death_v01_00039.png","horde_enemy_death_v01_00040.png","horde_enemy_death_v01_00041.png","horde_enemy_death_v01_00042.png","horde_enemy_death_v01_00043.png","horde_enemy_death_v01_00044.png","horde_enemy_death_v01_00045.png","horde_enemy_death_v01_00046.png","horde_enemy_death_v01_00047.png","horde_enemy_death_v01_00048.png","horde_enemy_death_v01_00049.png","horde_enemy_death_v01_00050.png","horde_enemy_death_v01_00051.png","horde_enemy_death_v01_00052.png","horde_enemy_death_v01_00053.png","horde_enemy_death_v01_00054.png","horde_enemy_death_v01_00055.png","horde_enemy_death_v01_00056.png","horde_enemy_death_v01_00057.png","horde_enemy_death_v01_00058.png","horde_enemy_death_v01_00059.png","horde_enemy_death_v01_00060.png","horde_enemy_death_v01_00061.png","horde_enemy_death_v01_00062.png","horde_enemy_death_v01_00063.png","horde_enemy_death_v01_00064.png"],
+	"horde_enemy_idle_v01": ["horde_enemy_idle_v01_00000.png","horde_enemy_idle_v01_00001.png","horde_enemy_idle_v01_00002.png","horde_enemy_idle_v01_00003.png","horde_enemy_idle_v01_00004.png","horde_enemy_idle_v01_00005.png","horde_enemy_idle_v01_00006.png","horde_enemy_idle_v01_00007.png","horde_enemy_idle_v01_00008.png","horde_enemy_idle_v01_00009.png","horde_enemy_idle_v01_00010.png","horde_enemy_idle_v01_00011.png","horde_enemy_idle_v01_00012.png","horde_enemy_idle_v01_00013.png","horde_enemy_idle_v01_00014.png","horde_enemy_idle_v01_00015.png","horde_enemy_idle_v01_00016.png","horde_enemy_idle_v01_00017.png","horde_enemy_idle_v01_00018.png","horde_enemy_idle_v01_00019.png","horde_enemy_idle_v01_00020.png","horde_enemy_idle_v01_00021.png","horde_enemy_idle_v01_00022.png","horde_enemy_idle_v01_00023.png","horde_enemy_idle_v01_00024.png","horde_enemy_idle_v01_00025.png","horde_enemy_idle_v01_00026.png","horde_enemy_idle_v01_00027.png","horde_enemy_idle_v01_00028.png","horde_enemy_idle_v01_00029.png","horde_enemy_idle_v01_00030.png","horde_enemy_idle_v01_00031.png","horde_enemy_idle_v01_00032.png","horde_enemy_idle_v01_00033.png","horde_enemy_idle_v01_00034.png","horde_enemy_idle_v01_00035.png","horde_enemy_idle_v01_00036.png","horde_enemy_idle_v01_00037.png","horde_enemy_idle_v01_00038.png","horde_enemy_idle_v01_00039.png","horde_enemy_idle_v01_00040.png","horde_enemy_idle_v01_00041.png","horde_enemy_idle_v01_00042.png","horde_enemy_idle_v01_00043.png","horde_enemy_idle_v01_00044.png","horde_enemy_idle_v01_00045.png","horde_enemy_idle_v01_00046.png","horde_enemy_idle_v01_00047.png","horde_enemy_idle_v01_00048.png","horde_enemy_idle_v01_00049.png","horde_enemy_idle_v01_00050.png","horde_enemy_idle_v01_00051.png","horde_enemy_idle_v01_00052.png","horde_enemy_idle_v01_00053.png","horde_enemy_idle_v01_00054.png"],
+	"horde_enemy_run_left_45_v01": ["horde_enemy_run_left_45_v01_00000.png","horde_enemy_run_left_45_v01_00001.png","horde_enemy_run_left_45_v01_00002.png","horde_enemy_run_left_45_v01_00003.png","horde_enemy_run_left_45_v01_00004.png","horde_enemy_run_left_45_v01_00005.png","horde_enemy_run_left_45_v01_00006.png","horde_enemy_run_left_45_v01_00007.png","horde_enemy_run_left_45_v01_00008.png","horde_enemy_run_left_45_v01_00009.png","horde_enemy_run_left_45_v01_00010.png","horde_enemy_run_left_45_v01_00011.png","horde_enemy_run_left_45_v01_00012.png","horde_enemy_run_left_45_v01_00013.png","horde_enemy_run_left_45_v01_00014.png","horde_enemy_run_left_45_v01_00015.png","horde_enemy_run_left_45_v01_00016.png","horde_enemy_run_left_45_v01_00017.png","horde_enemy_run_left_45_v01_00018.png","horde_enemy_run_left_45_v01_00019.png","horde_enemy_run_left_45_v01_00020.png"],
+	"horde_enemy_run_right_45_v01": ["horde_enemy_run_right_45_v01_00000.png","horde_enemy_run_right_45_v01_00001.png","horde_enemy_run_right_45_v01_00002.png","horde_enemy_run_right_45_v01_00003.png","horde_enemy_run_right_45_v01_00004.png","horde_enemy_run_right_45_v01_00005.png","horde_enemy_run_right_45_v01_00006.png","horde_enemy_run_right_45_v01_00007.png","horde_enemy_run_right_45_v01_00008.png","horde_enemy_run_right_45_v01_00009.png","horde_enemy_run_right_45_v01_00010.png","horde_enemy_run_right_45_v01_00011.png","horde_enemy_run_right_45_v01_00012.png","horde_enemy_run_right_45_v01_00013.png","horde_enemy_run_right_45_v01_00014.png","horde_enemy_run_right_45_v01_00015.png","horde_enemy_run_right_45_v01_00016.png","horde_enemy_run_right_45_v01_00017.png","horde_enemy_run_right_45_v01_00018.png","horde_enemy_run_right_45_v01_00019.png","horde_enemy_run_right_45_v01_00020.png"],
+	"horde_enemy_run_v01": ["horde_enemy_run_v01_00000.png","horde_enemy_run_v01_00001.png","horde_enemy_run_v01_00002.png","horde_enemy_run_v01_00003.png","horde_enemy_run_v01_00004.png","horde_enemy_run_v01_00005.png","horde_enemy_run_v01_00006.png","horde_enemy_run_v01_00007.png","horde_enemy_run_v01_00008.png","horde_enemy_run_v01_00009.png","horde_enemy_run_v01_00010.png","horde_enemy_run_v01_00011.png","horde_enemy_run_v01_00012.png","horde_enemy_run_v01_00013.png","horde_enemy_run_v01_00014.png","horde_enemy_run_v01_00015.png","horde_enemy_run_v01_00016.png","horde_enemy_run_v01_00017.png","horde_enemy_run_v01_00018.png","horde_enemy_run_v01_00019.png","horde_enemy_run_v01_00020.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.1",
+	"image": "enemy.png",
+	"format": "RGBA8888",
+	"size": {"w":1900,"h":1440},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:7a1099d8e138709f03c9c0a35337cbd7:4589e091f0f0cbf1ac8cce49da535e68:a99356c10d69482e9bee53d25c3d05e1$"
+}
+}
