@@ -12,21 +12,33 @@ class PixiApp {
     _curSoldiers = 0;
 
     set curSoldiers(value: number) {
-        this._curSoldiers = value;
         const { app, collisionObjects, soldierSize } = this;
+        const before = this._curSoldiers;
+        this._curSoldiers = value;
 
-        for (let i = 0; i < 50; i++) {
-            const randomSquare = new BoxCollider(Texture.WHITE, {
-                width: soldierSize,
-                height: soldierSize,
-                tint: 0xffffff,
-                x: Math.random() * app.screen.width,
-                y: Math.random() * app.screen.height,
-                acceleration: new Point(0),
-                mass: 1
-            });
-            app.stage.addChild(randomSquare);
-            collisionObjects.push(randomSquare);
+        if (before === value) return;
+
+        if (value < before) {
+            for (let i = 0; i < before - value; i++) {
+                const last = collisionObjects.pop();
+                if (last) {
+                    app.stage.removeChild(last);
+                }
+            }
+        } else {
+            for (let i = 0; i < value - before; i++) {
+                const soldier = new BoxCollider({
+                    width: soldierSize,
+                    height: soldierSize,
+                    tint: 0xffffff,
+                    x: Math.random() * app.screen.width,
+                    y: Math.random() * app.screen.height,
+                    acceleration: new Point(0),
+                    mass: 1
+                });
+                app.stage.addChild(soldier);
+                collisionObjects.push(soldier);
+            }
         }
     }
 
@@ -40,13 +52,14 @@ class PixiApp {
 
         promises.push(app.init({ background: "#000", resizeTo: window }));
         promises.push(Way.loadTextures());
+        promises.push(BoxCollider.loadTextures());
 
         Promise.all(promises).then(() => {
             frame.appendChild(app.canvas);
             //@ts-ignore
             globalThis.__PIXI_APP__ = app;
             this.way = new Way(app);
-            this.soldierSize = app.screen.width / 40;
+            this.soldierSize = app.screen.width / 20;
 
             this.init();
         });
@@ -65,8 +78,8 @@ class PixiApp {
         // Test For Hit
         // A basic AABB check between two different squares
         function testForAABB(object1: BoxCollider, object2: BoxCollider) {
-            const bounds1 = object1.getBounds();
-            const bounds2 = object2.getBounds();
+            const bounds1 = object1.boundary.getBounds();
+            const bounds2 = object2.boundary.getBounds();
 
             return (
                 bounds1.x < bounds2.x + bounds2.width &&
@@ -80,8 +93,8 @@ class PixiApp {
             object1: BoxCollider,
             object2: BoxCollider
         ) {
-            const bounds1 = object1.getBounds();
-            const bounds2 = object2.getBounds();
+            const bounds1 = object1.boundary.getBounds();
+            const bounds2 = object2.boundary.getBounds();
 
             // Calculate the distance between the centers of the circles
             const dx = bounds1.x - bounds2.x;
@@ -130,18 +143,19 @@ class PixiApp {
         const soldierSize = app.screen.width / 40;
 
         // The square you move around
-        const redSquare = new BoxCollider(Texture.WHITE, {
+        const target = new BoxCollider({
             width: soldierSize,
             height: soldierSize,
             tint: 0xff0000,
             x: (app.screen.width - soldierSize) / 2,
             y: (app.screen.height - soldierSize) / 2,
             acceleration: new Point(0),
-            mass: 5000
+            mass: 5000,
+            isTarget: true
         });
-        app.stage.addChild(redSquare);
+        app.stage.addChild(target);
 
-        this.curSoldiers = 50;
+        this.curSoldiers = 5;
 
         const mouseCoords = {
             x: app.screen.width / 2,
@@ -152,7 +166,7 @@ class PixiApp {
         app.stage.hitArea = app.screen;
         app.stage.on("mousemove", event => {
             mouseCoords.x = Math.min(
-                Math.max(app.screen.width * 0.25, event.global.x),
+                Math.max(app.screen.width * 0.2, event.global.x),
                 app.screen.width * 0.8
             );
         });
@@ -162,10 +176,10 @@ class PixiApp {
             if (!this.isGameStarted) return;
             const delta = time.deltaTime;
 
-            const redSquareCenterPosition = redSquare.center;
+            const targetCenterPosition = target.center;
 
             way.tickerUpdate(delta);
-            redSquare.tickerUpdate(delta);
+            target.tickerUpdate(delta);
             collisionObjects.forEach(object => {
                 object.tickerUpdate(delta);
                 // Check whether the green square ever moves off the screen
@@ -188,33 +202,42 @@ class PixiApp {
 
             //let green square follow the red square
             collisionObjects
-                .filter(object => object !== redSquare)
+                .filter(object => object !== target)
                 .forEach(object1 => {
+                    object1.zIndex = Math.round(object1.y / 10);
+                    if (target.acceleration.x > 1) {
+                        object1.setAnimation("right");
+                    } else if (target.acceleration.x < -1) {
+                        object1.setAnimation("left");
+                    } else {
+                        object1.setAnimation("forward");
+                    }
+
                     const greenSquareCenterPosition = new Point(
-                        object1.x + object1.width * 0.5,
-                        object1.y + object1.height * 0.5
+                        object1.x,
+                        object1.y
                     );
 
-                    const toRedSquareDirection = new Point(
-                        redSquare.x - greenSquareCenterPosition.x,
-                        redSquare.y - greenSquareCenterPosition.y
+                    const totargetDirection = new Point(
+                        target.x - greenSquareCenterPosition.x,
+                        target.y - greenSquareCenterPosition.y
                     );
 
-                    const angleToRedSquare = Math.atan2(
-                        toRedSquareDirection.y,
-                        toRedSquareDirection.x
+                    const angleTotarget = Math.atan2(
+                        totargetDirection.y,
+                        totargetDirection.x
                     );
 
                     const distRedGreenSquare = distanceBetweenTwoPoints(
-                        redSquareCenterPosition,
+                        targetCenterPosition,
                         greenSquareCenterPosition
                     );
 
                     const greenSpeed = distRedGreenSquare * movementSpeed;
 
                     object1.acceleration.set(
-                        Math.cos(angleToRedSquare) * greenSpeed,
-                        Math.sin(angleToRedSquare) * greenSpeed
+                        Math.cos(angleTotarget) * greenSpeed,
+                        Math.sin(angleTotarget) * greenSpeed
                     );
 
                     collisionObjects
@@ -237,8 +260,8 @@ class PixiApp {
             // Calculate the direction vector between the mouse pointer and
             // the red square
             const toMouseDirection = new Point(
-                mouseCoords.x - redSquareCenterPosition.x,
-                mouseCoords.y - redSquareCenterPosition.y
+                mouseCoords.x - targetCenterPosition.x,
+                mouseCoords.y - targetCenterPosition.y
             );
 
             // Use the above to figure out the angle that direction has
@@ -249,14 +272,14 @@ class PixiApp {
 
             // Figure out the speed the square should be travelling by, as a
             // function of how far away from the mouse pointer the red square is
-            const distMouseRedSquare = distanceBetweenTwoPoints(
+            const distMousetarget = distanceBetweenTwoPoints(
                 mouseCoords as Point,
-                redSquareCenterPosition
+                targetCenterPosition
             );
-            const redSpeed = distMouseRedSquare * movementSpeed;
+            const redSpeed = distMousetarget * movementSpeed;
 
             // Calculate the acceleration of the red square
-            redSquare.acceleration.set(
+            target.acceleration.set(
                 Math.cos(angleToMouse) * redSpeed,
                 Math.sin(angleToMouse) * redSpeed
             );
