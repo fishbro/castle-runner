@@ -6,6 +6,8 @@ import {
     Sprite
 } from "pixi.js";
 
+type WayState = "start" | "way" | "pause" | "end";
+
 class Way {
     symbol: Container<ContainerChild> = new Container();
     app: Application;
@@ -13,6 +15,7 @@ class Way {
     startPoint = 0;
     curPos = 0;
     speed = 1;
+    state: WayState = "start";
 
     constructor(app: Application) {
         this.app = app;
@@ -70,11 +73,24 @@ class Way {
         tiles: ["start", "way", "end"]
     };
 
+    start() {
+        this.state = "way";
+    }
+
+    pause() {
+        this.state = "pause";
+    }
+
+    end() {
+        this.state = "end";
+    }
+
     tickerUpdate(delta: number) {
-        const { symbol, startPoint, speed } = this;
+        const { symbol, startPoint, speed, state } = this;
+
+        if (state === "pause") return;
 
         this.curPos += speed * delta;
-
         if (symbol.y < symbol.height) symbol.y = this.curPos + startPoint;
     }
 }
