@@ -6,6 +6,34 @@ class PixiApp {
     app: Application = new Application();
     way: Way | null = null;
 
+    isGameStarted = false;
+    soldierSize = 0;
+    collisionObjects: BoxCollider[] = [];
+    _curSoldiers = 0;
+
+    set curSoldiers(value: number) {
+        this._curSoldiers = value;
+        const { app, collisionObjects, soldierSize } = this;
+
+        for (let i = 0; i < 50; i++) {
+            const randomSquare = new BoxCollider(Texture.WHITE, {
+                width: soldierSize,
+                height: soldierSize,
+                tint: 0xffffff,
+                x: Math.random() * app.screen.width,
+                y: Math.random() * app.screen.height,
+                acceleration: new Point(0),
+                mass: 1
+            });
+            app.stage.addChild(randomSquare);
+            collisionObjects.push(randomSquare);
+        }
+    }
+
+    get curSoldiers() {
+        return this._curSoldiers;
+    }
+
     constructor(frame: HTMLDivElement) {
         const { app, way } = this;
         const promises = [];
@@ -18,13 +46,14 @@ class PixiApp {
             //@ts-ignore
             globalThis.__PIXI_APP__ = app;
             this.way = new Way(app);
+            this.soldierSize = app.screen.width / 40;
 
             this.init();
         });
     }
 
     init() {
-        const { app, way } = this;
+        const { app, way, collisionObjects } = this;
 
         if (!way) return;
         way.init();
@@ -98,7 +127,6 @@ class PixiApp {
             return Math.hypot(a, b);
         }
 
-        const collisionObjects: BoxCollider[] = [];
         const soldierSize = app.screen.width / 40;
 
         // The square you move around
@@ -113,19 +141,7 @@ class PixiApp {
         });
         app.stage.addChild(redSquare);
 
-        for (let i = 0; i < 50; i++) {
-            const randomSquare = new BoxCollider(Texture.WHITE, {
-                width: soldierSize,
-                height: soldierSize,
-                tint: 0xffffff,
-                x: Math.random() * app.screen.width,
-                y: Math.random() * app.screen.height,
-                acceleration: new Point(0),
-                mass: 1
-            });
-            app.stage.addChild(randomSquare);
-            collisionObjects.push(randomSquare);
-        }
+        this.curSoldiers = 50;
 
         const mouseCoords = {
             x: app.screen.width / 2,
@@ -143,6 +159,7 @@ class PixiApp {
 
         // Listen for animate update
         app.ticker.add(time => {
+            if (!this.isGameStarted) return;
             const delta = time.deltaTime;
 
             const redSquareCenterPosition = redSquare.center;
@@ -251,6 +268,10 @@ class PixiApp {
                 );
             });
         });
+    }
+
+    start() {
+        this.isGameStarted = true;
     }
 }
 
