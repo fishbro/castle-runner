@@ -7,6 +7,7 @@ import {
     distanceBetweenTwoPoints,
     testForAABB
 } from "../utils/misc";
+import Soldier from "../units/Soldier";
 
 class PixiApp {
     static events: EventEmitter = new EventEmitter();
@@ -35,7 +36,7 @@ class PixiApp {
             }
         } else {
             for (let i = 0; i < value - before; i++) {
-                const soldier = new BoxCollider({
+                const soldier = new Soldier({
                     width: soldierSize,
                     height: soldierSize,
                     tint: 0xffffff,
@@ -64,7 +65,7 @@ class PixiApp {
 
         promises.push(app.init({ background: "#000", resizeTo: window }));
         promises.push(Way.loadTextures());
-        promises.push(BoxCollider.loadTextures());
+        promises.push(Soldier.loadTextures());
 
         Promise.all(promises).then(() => {
             frame.appendChild(app.canvas);
@@ -93,7 +94,7 @@ class PixiApp {
         const soldierSize = app.screen.width / 40;
 
         // The square you move around
-        const target = new BoxCollider({
+        const target = new Soldier({
             width: soldierSize,
             height: soldierSize,
             tint: 0xff0000,
@@ -158,12 +159,14 @@ class PixiApp {
                 .filter(object => object !== target)
                 .forEach(object1 => {
                     object1.zIndex = Math.round(object1.y / 10);
-                    if (target.acceleration.x > 1) {
-                        object1.setAnimation("right");
-                    } else if (target.acceleration.x < -1) {
-                        object1.setAnimation("left");
-                    } else {
-                        object1.setAnimation("forward");
+                    if (object1 instanceof Soldier) {
+                        if (target.acceleration.x > 1) {
+                            object1.setAnimation("right");
+                        } else if (target.acceleration.x < -1) {
+                            object1.setAnimation("left");
+                        } else {
+                            object1.setAnimation("forward");
+                        }
                     }
 
                     const greenSquareCenterPosition = new Point(
