@@ -21,6 +21,8 @@ class Soldier extends BoxCollider {
     }
 
     addAnimations = () => {
+        const { width, height } = this.boundary;
+
         Object.keys(anim_conf).forEach((conf, key) => {
             //@ts-ignore
             const anim_name = anim_conf[conf];
@@ -28,6 +30,7 @@ class Soldier extends BoxCollider {
                 Assets.get("our").animations[anim_name]
             );
             animation.anchor.set(0.5);
+            animation.scale.set(width * 0.04, height * 0.04);
             animation.animationSpeed = 0.5;
             animation.play();
             animation.visible = false;

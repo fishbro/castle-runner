@@ -63,7 +63,7 @@ class PixiApp {
         const { app } = this;
         const promises = [];
 
-        promises.push(app.init({ background: "#000", resizeTo: window }));
+        promises.push(app.init({ background: "#000", resizeTo: frame }));
         promises.push(Way.loadTextures());
         promises.push(Soldier.loadTextures());
 

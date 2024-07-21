@@ -14,7 +14,7 @@ class Way {
 
     startPoint = 0;
     curPos = 0;
-    speed = 1;
+    speed = 3;
     state: WayState = "start";
 
     constructor(app: Application) {
@@ -65,12 +65,10 @@ class Way {
         this.startPoint = this.symbol.y;
 
         app.stage.addChild(symbol);
-
-        this.speed = symbol.height / 1000;
     };
 
     conf = {
-        tiles: ["start", "way", "end"]
+        tiles: ["start", "way", "way", "way", "end"]
     };
 
     start() {
