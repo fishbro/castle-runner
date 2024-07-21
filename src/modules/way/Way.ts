@@ -3,7 +3,9 @@ import {
     Assets,
     Container,
     ContainerChild,
-    Sprite
+    Point,
+    Sprite,
+    Texture
 } from "pixi.js";
 
 type WayState = "start" | "way" | "pause" | "end";
@@ -19,6 +21,7 @@ class Way {
 
     constructor(app: Application) {
         this.app = app;
+        this.symbol.sortableChildren = true;
     }
 
     static loadTextures = () => {
@@ -41,22 +44,58 @@ class Way {
     init = () => {
         const { symbol, conf, app } = this;
 
-        let pos = 0;
+        const objectsContainer = new Container();
+        objectsContainer.name = "objects";
 
-        conf.tiles.forEach(tile => {
-            const container = new Container();
-            container.name = tile;
-            const texture = Assets.get(tile);
-            const sprite = new Sprite(texture);
-            sprite.name = tile;
-            container.addChild(sprite);
+        let tileOffset = 0;
+        conf.tiles.forEach(({ type, objects }) => {
+            const tileContainer = new Container();
+            tileContainer.name = type;
 
-            sprite.anchor.set(0, 1);
-            sprite.y = pos;
-            pos += -sprite.height;
+            const texture = Assets.get(type);
+            const waySprite = new Sprite(texture);
+            tileContainer.addChild(waySprite);
+            waySprite.name = type;
 
-            symbol.addChild(container);
+            if (objects) {
+                objects.forEach(obj => {
+                    switch (obj.type) {
+                        case "multiplier":
+                            const { value, pos, width } = obj;
+                            const multiplier = new Container();
+                            objectsContainer.addChild(multiplier);
+
+                            multiplier.zIndex = 10;
+                            multiplier.position.set(
+                                waySprite.width * pos.x,
+                                waySprite.height * pos.y * -1 + tileOffset
+                            );
+
+                            const objSprite = new Sprite({
+                                texture: Texture.WHITE
+                            });
+                            objSprite.anchor.set(0.5);
+                            objSprite.width = waySprite.width * width;
+                            objSprite.height = 100;
+
+                            multiplier.addChild(objSprite);
+
+                            break;
+
+                        default:
+                            break;
+                    }
+                });
+            }
+
+            symbol.addChild(tileContainer);
+
+            waySprite.anchor.set(0, 1);
+            waySprite.y = tileOffset;
+            tileOffset += -waySprite.height;
         });
+
+        symbol.addChild(objectsContainer);
 
         const factor = symbol.width / app.screen.width;
         symbol.scale.set(1 / factor);
@@ -68,7 +107,65 @@ class Way {
     };
 
     conf = {
-        tiles: ["start", "way", "way", "way", "end"]
+        tiles: [
+            {
+                type: "start",
+                objects: [
+                    {
+                        type: "multiplier",
+                        value: 2,
+                        pos: new Point(0.75, 1),
+                        width: 0.5
+                    },
+                    {
+                        type: "multiplier",
+                        value: 2,
+                        pos: new Point(0.75, 0.5),
+                        width: 0.5
+                    }
+                ]
+            },
+            {
+                type: "way",
+                objects: [
+                    {
+                        type: "multiplier",
+                        value: 2,
+                        pos: new Point(0.25, 0),
+                        width: 0.5
+                    },
+                    {
+                        type: "multiplier",
+                        value: 2,
+                        pos: new Point(0.25, 0.5),
+                        width: 0.5
+                    },
+                    {
+                        type: "multiplier",
+                        value: 2,
+                        pos: new Point(0.25, 1),
+                        width: 0.5
+                    }
+                ]
+            },
+            {
+                type: "end",
+                objects: [
+                    {
+                        type: "multiplier",
+                        value: 2,
+                        pos: new Point(0.75, 0),
+                        width: 0.5
+                    },
+                    {
+                        type: "multiplier",
+                        value: 2,
+                        pos: new Point(0.75, 0.5),
+                        width: 0.5
+                    }
+                ]
+            }
+        ]
     };
 
     start() {
