@@ -88,9 +88,13 @@ class PixiApp {
 
                 if (object1.x < app.stage.width * 0.2) {
                     object1.x = app.stage.width * 0.2;
+                    //@ts-ignore
+                    object1.acceleration.x = 0;
                 }
                 if (object1.x > app.stage.width * 0.8) {
                     object1.x = app.stage.width * 0.8;
+                    //@ts-ignore
+                    object1.acceleration.x = 0;
                 }
             });
 
