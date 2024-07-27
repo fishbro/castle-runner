@@ -97,6 +97,14 @@ class Soldier extends BoxCollider {
 
         this.x += this.acceleration.x * delta;
         this.y += this.acceleration.y * delta;
+
+        if (this.acceleration.x > 1.5) {
+            this.setAnimation("right");
+        } else if (this.acceleration.x < -1.5) {
+            this.setAnimation("left");
+        } else {
+            this.setAnimation("forward");
+        }
     }
 
     onCollide(collider: Soldier) {
