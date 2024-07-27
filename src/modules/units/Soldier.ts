@@ -1,5 +1,6 @@
 import BoxCollider, { BoxColliderOptions } from "../main/BoxCollider";
-import { AnimatedSprite, Assets, DestroyOptions } from "pixi.js";
+import { AnimatedSprite, Assets, DestroyOptions, Point } from "pixi.js";
+import { collisionResponse } from "../utils/misc";
 
 const anim_conf = {
     left: "horde_knight_run_left_45_v01",
@@ -9,12 +10,32 @@ const anim_conf = {
 
 type AnimType = "left" | "right" | "forward";
 
+export type SoldierOptions = BoxColliderOptions & {
+    width?: number;
+    height?: number;
+    tint?: number;
+    x?: number;
+    y?: number;
+    acceleration?: Point;
+    mass?: number;
+    isTarget?: boolean;
+};
+
 class Soldier extends BoxCollider {
+    acceleration: Point;
+    mass: number;
+    isTarget = false;
+
     curAnim: AnimType | null = null;
     animations: Map<AnimType, AnimatedSprite> = new Map();
 
-    constructor(options: BoxColliderOptions) {
+    constructor(options: SoldierOptions) {
         super(options);
+
+        this.acceleration = options.acceleration || new Point(0);
+        this.mass = options.mass || 1;
+
+        if (options.isTarget) this.isTarget = true;
 
         this.addAnimations();
         this.setAnimation("forward");
@@ -67,6 +88,27 @@ class Soldier extends BoxCollider {
             }
         ]);
     };
+
+    tickerUpdate(delta: number) {
+        this.acceleration.set(
+            this.acceleration.x * 0.9,
+            this.acceleration.y * 0.9
+        );
+
+        this.x += this.acceleration.x * delta;
+        this.y += this.acceleration.y * delta;
+    }
+
+    onCollide(collider: Soldier) {
+        super.onCollide(collider);
+
+        const collisionPush = collisionResponse(collider, this);
+
+        this.acceleration.set(
+            this.acceleration.x + collisionPush.x * collider.mass,
+            this.acceleration.y + collisionPush.y * collider.mass
+        );
+    }
 
     destroy(options?: DestroyOptions) {
         this.animations.forEach(anim => anim.destroy());

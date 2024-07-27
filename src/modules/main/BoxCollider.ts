@@ -7,16 +7,10 @@ export type BoxColliderOptions = {
     tint?: number;
     x?: number;
     y?: number;
-    acceleration?: Point;
-    mass?: number;
-    isTarget?: boolean;
 };
 
 class BoxCollider extends Container<any> {
-    acceleration: Point;
-    mass: number;
     boundary: Sprite = new Sprite();
-    isTarget = false;
 
     constructor(options: BoxColliderOptions) {
         super(options);
@@ -25,8 +19,6 @@ class BoxCollider extends Container<any> {
 
         this.x = options.x || 0;
         this.y = options.y || 0;
-        this.acceleration = options.acceleration || new Point(0);
-        this.mass = options.mass || 1;
 
         this.boundary.width = options.width || 0;
         this.boundary.height = options.height || 0;
@@ -36,33 +28,19 @@ class BoxCollider extends Container<any> {
         const { boundary } = this;
         this.addChild(boundary);
 
-        if (options.isTarget) {
-            this.isTarget = true;
-            this.boundary.texture = Texture.WHITE;
-        } else {
-            PixiApp.events.emit("addCollisionObject", this);
-        }
+        PixiApp.events.emit("addCollisionObject", this);
     }
 
     get center() {
         return new Point(this.x, this.y);
     }
 
-    tickerUpdate(delta: number) {
-        this.acceleration.set(
-            this.acceleration.x * 0.99,
-            this.acceleration.y * 0.99
-        );
+    tickerUpdate(delta: number) {}
 
-        this.x += this.acceleration.x * delta;
-        this.y += this.acceleration.y * delta;
-    }
+    onCollide(collider: BoxCollider) {}
 
     destroy(options?: DestroyOptions) {
-        if (!this.isTarget) {
-            PixiApp.events.emit("removeCollisionObject", this);
-        }
-
+        PixiApp.events.emit("removeCollisionObject", this);
         this.boundary.destroy();
 
         super.destroy(options);
