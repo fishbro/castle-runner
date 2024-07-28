@@ -3,7 +3,7 @@ import { Application, DestroyOptions, Point } from "pixi.js";
 import { distanceBetweenTwoPoints } from "../utils/misc";
 import BoxCollider, { BoxColliderOptions } from "../main/BoxCollider";
 
-type SquadOptions = BoxColliderOptions & {
+export type SquadOptions = BoxColliderOptions & {
     app: Application;
     soldiers: number;
     target: Point;
@@ -21,14 +21,15 @@ class Squad extends BoxCollider {
         super(options);
 
         this.app = options.app;
-        this.curSoldiers = options.soldiers;
         this.target = options.target;
+        this.curSoldiers = options.soldiers;
 
         this.init();
     }
 
     init() {
         const { soldierSize, app } = this;
+        this.name = "Squad";
 
         this.boundary.width = soldierSize;
         this.boundary.height = soldierSize;
@@ -37,7 +38,7 @@ class Squad extends BoxCollider {
         this.boundary.zIndex = 1000;
         this.boundary.x = this.target.x;
         this.boundary.y = this.target.y;
-        app.stage.addChild(this.boundary);
+        this.addChild(this.boundary);
     }
 
     _curSoldiers = 0;
@@ -54,7 +55,7 @@ class Squad extends BoxCollider {
                 const last = soldiersList.pop();
                 if (last) {
                     last.markForDestroy();
-                    app.stage.removeChild(last);
+                    this.removeChild(last);
                 }
             }
         } else {
@@ -64,16 +65,12 @@ class Squad extends BoxCollider {
                     width: soldierSize,
                     height: soldierSize,
                     tint: 0xffffff,
-                    x:
-                        (app.screen.width - soldierSize) / 2 +
-                        (1 - Math.random()) * 10,
-                    y:
-                        (app.screen.height - soldierSize) / 2 +
-                        (1 - Math.random()) * 10,
+                    x: this.target.x + (1 - Math.random()) * 10,
+                    y: this.target.y + (1 - Math.random()) * 10,
                     acceleration: new Point(0),
                     mass: 0.1
                 });
-                app.stage.addChild(soldier);
+                this.addChild(soldier);
                 soldiersList.push(soldier);
             }
         }

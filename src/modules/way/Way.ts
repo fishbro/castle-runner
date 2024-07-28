@@ -4,13 +4,11 @@ import {
     Container,
     ContainerChild,
     Point,
-    Sprite,
-    Texture
+    Sprite
 } from "pixi.js";
-import Trigger from "./Trigger";
 import Squad from "../units/Squad";
 import Gate from "./Gate";
-import BoxCollider from "../main/BoxCollider";
+import EnemySquad from "../units/EnemySquad";
 
 type WayState = "start" | "way" | "pause" | "end";
 
@@ -63,21 +61,16 @@ class Way {
 
             if (objects) {
                 objects.forEach(obj => {
-                    const { value, pos, width } = obj;
-                    let options = {
-                        width: waySprite.width * width,
-                        height: 100,
-                        tint: 0x00ff00,
-                        x: waySprite.width * pos.x,
-                        y: waySprite.height * pos.y * -1 + tileOffset,
-                        onTrigger: (trigger: Trigger, collider: BoxCollider) =>
-                            true,
-                        text: ""
-                    };
+                    let object = null;
+                    const { value, pos, width = 0 } = obj;
                     switch (obj.type) {
                         case "multiplier":
-                            options = {
-                                ...options,
+                            object = new Gate({
+                                width: waySprite.width * width,
+                                height: 100,
+                                tint: 0x00ff00,
+                                x: waySprite.width * pos.x,
+                                y: waySprite.height * pos.y * -1 + tileOffset,
                                 text:
                                     value >= 1
                                         ? `* ${value}`
@@ -91,13 +84,17 @@ class Way {
                                     }
                                     return false;
                                 }
-                            };
+                            });
 
                             break;
 
                         case "increase":
-                            options = {
-                                ...options,
+                            object = new Gate({
+                                width: waySprite.width * width,
+                                height: 100,
+                                tint: 0x00ff00,
+                                x: waySprite.width * pos.x,
+                                y: waySprite.height * pos.y * -1 + tileOffset,
                                 text: value.toString(),
                                 onTrigger: (_trigger, collider) => {
                                     if (collider instanceof Squad) {
@@ -108,15 +105,28 @@ class Way {
                                     }
                                     return false;
                                 }
-                            };
+                            });
+
+                            break;
+
+                        case "enemy":
+                            object = new EnemySquad({
+                                app,
+                                soldiers: value,
+                                target: new Point(
+                                    waySprite.width * pos.x,
+                                    waySprite.height * pos.y * -1 + tileOffset
+                                ),
+                                debug: true
+                            });
 
                             break;
 
                         default:
                             break;
                     }
-                    const multiplier = new Gate(options);
-                    objectsContainer.addChild(multiplier);
+
+                    if (object) objectsContainer.addChild(object);
                 });
             }
 
@@ -150,9 +160,14 @@ class Way {
                         width: 0.5
                     },
                     {
+                        type: "enemy",
+                        value: 40,
+                        pos: new Point(0.5, 0.5)
+                    },
+                    {
                         type: "multiplier",
                         value: 2,
-                        pos: new Point(0.75, 0.5),
+                        pos: new Point(0.75, 0.75),
                         width: 0.5
                     }
                 ]
@@ -166,12 +181,11 @@ class Way {
                         pos: new Point(0.25, 0),
                         width: 0.5
                     },
-                    {
-                        type: "multiplier",
-                        value: 2,
-                        pos: new Point(0.25, 0.5),
-                        width: 0.5
-                    },
+                    // {
+                    //     type: "enemy",
+                    //     value: 40,
+                    //     pos: new Point(0.5, 0.5)
+                    // },
                     {
                         type: "multiplier",
                         value: 2,

@@ -50,6 +50,7 @@ class PixiApp {
             soldiers: 1,
             target: new Point(app.screen.width / 2, app.screen.height / 2)
         });
+        app.stage.addChild(playerSquad);
 
         const mouseCoords = {
             x: app.screen.width / 2,
