@@ -12,18 +12,21 @@ import EnemySquad from "../units/EnemySquad";
 import BoxCollider from "../core/BoxCollider";
 import PixiApp from "../main/PixiApp";
 import { distanceBetweenTwoPoints, testForAABB } from "../utils/misc";
-import Soldier from "../units/Soldier";
 import Scene from "../main/Scene";
+import Soldier from "../units/Soldier";
 
 type WayState = "start" | "way" | "pause" | "end";
 
 class RoadScene extends Scene {
+    road: Container<ContainerChild> = new Container();
     collisionObjects: BoxCollider[] = [];
 
     startPoint = 0;
     curPos = 0;
-    speed = 3;
+    baseSpeed = 3;
+    speed = this.baseSpeed;
     state: WayState = "start";
+    scaleFactor = 1;
 
     soldierSpeed = 0.05;
     playerSquad: Squad | null = null;
@@ -33,6 +36,7 @@ class RoadScene extends Scene {
         super(app);
 
         this.symbol.name = "RoadScene";
+        this.road.name = "Road";
     }
 
     static loadTextures = () => {
@@ -53,13 +57,13 @@ class RoadScene extends Scene {
     };
 
     init = () => {
-        const { symbol, conf, app } = this;
+        const { symbol, road, conf, app } = this;
 
         PixiApp.events.on("addCollisionObject", this.addCollisionObject);
         PixiApp.events.on("removeCollisionObject", this.removeCollisionObject);
 
         const objectsContainer = new Container();
-        objectsContainer.name = "objects";
+        objectsContainer.name = "Objects";
 
         let tileOffset = 0;
         conf.tiles.forEach(({ type, objects }) => {
@@ -142,32 +146,36 @@ class RoadScene extends Scene {
                 });
             }
 
-            symbol.addChild(tileContainer);
+            road.addChild(tileContainer);
 
             waySprite.anchor.set(0, 1);
             waySprite.y = tileOffset;
             tileOffset += -waySprite.height;
         });
 
-        symbol.addChild(objectsContainer);
+        road.addChild(objectsContainer);
 
-        const factor = symbol.width / app.app.screen.width;
+        const factor = (this.scaleFactor = road.width / app.app.screen.width);
         symbol.scale.set(1 / factor);
-        symbol.y = app.app.screen.height;
+        road.y = app.app.screen.height * factor;
 
-        this.startPoint = this.symbol.y;
+        this.speed = this.baseSpeed * factor;
 
-        app.app.stage.addChild(symbol);
+        this.startPoint = this.road.y;
+
+        symbol.addChild(road);
 
         const playerSquad = (this.playerSquad = new Squad({
             soldiers: 1,
             target: new Point(
-                app.app.screen.width / 2,
-                app.app.screen.height / 2
+                (app.app.screen.width * this.scaleFactor) / 2,
+                (app.app.screen.height * this.scaleFactor) / 2
             ),
             debug: true
         }));
-        app.app.stage.addChild(playerSquad);
+        symbol.addChild(playerSquad);
+
+        app.app.stage.addChild(symbol);
     };
 
     conf = {
@@ -275,7 +283,7 @@ class RoadScene extends Scene {
     tickerUpdate(delta: number) {
         const {
             app,
-            symbol,
+            road,
             startPoint,
             speed,
             state,
@@ -283,6 +291,11 @@ class RoadScene extends Scene {
             playerSquad,
             soldierSpeed
         } = this;
+
+        const mouseCoords = new Point(
+            app.mouseCoords.x * this.scaleFactor,
+            app.mouseCoords.y * this.scaleFactor
+        );
 
         if (!playerSquad) return;
 
@@ -293,7 +306,7 @@ class RoadScene extends Scene {
         });
 
         this.curPos += speed * delta;
-        if (symbol.y < symbol.height) symbol.y = this.curPos + startPoint;
+        if (road.y < road.height) road.y = this.curPos + startPoint;
 
         playerSquad.tickerUpdate(delta);
 
@@ -314,13 +327,13 @@ class RoadScene extends Scene {
                 });
 
             if (object1 instanceof Soldier) {
-                if (object1.x < app.app.stage.width * this.conf.borders[0]) {
-                    object1.x = app.app.stage.width * this.conf.borders[0];
+                if (object1.x < this.road.width * this.conf.borders[0]) {
+                    object1.x = this.road.width * this.conf.borders[0];
                     //@ts-ignore
                     object1.acceleration.x = 0;
                 }
-                if (object1.x > app.app.stage.width * this.conf.borders[1]) {
-                    object1.x = app.app.stage.width * this.conf.borders[1];
+                if (object1.x > this.road.width * this.conf.borders[1]) {
+                    object1.x = this.road.width * this.conf.borders[1];
                     //@ts-ignore
                     object1.acceleration.x = 0;
                 }
@@ -328,8 +341,8 @@ class RoadScene extends Scene {
         });
 
         const toMouseDirection = new Point(
-            app.mouseCoords.x - playerSquad.target.x,
-            app.mouseCoords.y - playerSquad.target.y
+            mouseCoords.x - playerSquad.target.x,
+            mouseCoords.y - playerSquad.target.y
         );
 
         // Use the above to figure out the angle that direction has
@@ -338,7 +351,7 @@ class RoadScene extends Scene {
         // Figure out the speed the square should be travelling by, as a
         // function of how far away from the mouse pointer the red square is
         const distMousetarget = distanceBetweenTwoPoints(
-            app.mouseCoords,
+            mouseCoords,
             playerSquad.target
         );
         const redSpeed = distMousetarget * soldierSpeed;

@@ -10,7 +10,7 @@ export type SquadOptions = BoxColliderOptions & {
 };
 
 class Squad extends BoxCollider {
-    soldierSize = 20;
+    soldierSize = 40;
     soldiersList: Soldier[] = [];
     target: Point;
     movementSpeed = 0.005;
