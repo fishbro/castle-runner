@@ -1,6 +1,6 @@
 import { Application, Point } from "pixi.js";
-import BoxCollider from "./BoxCollider";
-import Way from "../way/Way";
+import BoxCollider from "../core/BoxCollider";
+import RoadScene from "../way/RoadScene";
 import EventEmitter from "eventemitter3";
 import { distanceBetweenTwoPoints, testForAABB } from "../utils/misc";
 import Soldier from "../units/Soldier";
@@ -9,7 +9,7 @@ import Squad from "../units/Squad";
 class PixiApp {
     static events: EventEmitter = new EventEmitter();
     app: Application = new Application();
-    way: Way | null = null;
+    way: RoadScene | null = null;
     mouseCoords: Point = new Point();
 
     isGameStarted = false;
@@ -19,14 +19,14 @@ class PixiApp {
         const promises = [];
 
         promises.push(app.init({ background: "#000", resizeTo: frame }));
-        promises.push(Way.loadTextures());
+        promises.push(RoadScene.loadTextures());
         promises.push(Soldier.loadTextures());
 
         Promise.all(promises).then(() => {
             frame.appendChild(app.canvas);
             //@ts-ignore
             globalThis.__PIXI_APP__ = app;
-            this.way = new Way(this);
+            this.way = new RoadScene(this);
             // this.soldierSize = app.screen.width / 20;
 
             this.init();

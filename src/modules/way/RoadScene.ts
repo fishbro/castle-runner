@@ -9,16 +9,15 @@ import {
 import Squad from "../units/Squad";
 import Gate from "./Gate";
 import EnemySquad from "../units/EnemySquad";
-import BoxCollider from "../main/BoxCollider";
+import BoxCollider from "../core/BoxCollider";
 import PixiApp from "../main/PixiApp";
 import { distanceBetweenTwoPoints, testForAABB } from "../utils/misc";
 import Soldier from "../units/Soldier";
+import Scene from "../main/Scene";
 
 type WayState = "start" | "way" | "pause" | "end";
 
-class Way {
-    symbol: Container<ContainerChild> = new Container();
-    app: PixiApp;
+class RoadScene extends Scene {
     collisionObjects: BoxCollider[] = [];
 
     startPoint = 0;
@@ -31,9 +30,9 @@ class Way {
     enemies: EnemySquad[] = [];
 
     constructor(app: PixiApp) {
-        this.app = app;
-        this.symbol.sortableChildren = true;
-        this.symbol.name = "way";
+        super(app);
+
+        this.symbol.name = "RoadScene";
     }
 
     static loadTextures = () => {
@@ -363,4 +362,4 @@ class Way {
     };
 }
 
-export default Way;
+export default RoadScene;

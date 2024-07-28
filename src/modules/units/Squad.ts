@@ -1,7 +1,7 @@
 import Soldier from "./Soldier";
 import { DestroyOptions, Point, Texture } from "pixi.js";
 import { distanceBetweenTwoPoints } from "../utils/misc";
-import BoxCollider, { BoxColliderOptions } from "../main/BoxCollider";
+import BoxCollider, { BoxColliderOptions } from "../core/BoxCollider";
 
 export type SquadOptions = BoxColliderOptions & {
     soldiers: number;

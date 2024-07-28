@@ -1,4 +1,4 @@
-import BoxCollider, { BoxColliderOptions } from "../main/BoxCollider";
+import BoxCollider, { BoxColliderOptions } from "./BoxCollider";
 import { DestroyOptions } from "pixi.js";
 
 export type TriggerOptions = BoxColliderOptions & {

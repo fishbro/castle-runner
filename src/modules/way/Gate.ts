@@ -1,4 +1,4 @@
-import Trigger, { TriggerOptions } from "./Trigger";
+import Trigger, { TriggerOptions } from "../core/Trigger";
 import { DestroyOptions, Sprite, Text, Texture } from "pixi.js";
 
 export type GateOptions = TriggerOptions & {

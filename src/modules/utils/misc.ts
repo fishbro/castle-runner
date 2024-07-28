@@ -1,4 +1,4 @@
-import BoxCollider from "../main/BoxCollider";
+import BoxCollider from "../core/BoxCollider";
 import { Point } from "pixi.js";
 
 export function testForAABB(object1: BoxCollider, object2: BoxCollider) {

@@ -1,4 +1,4 @@
-import BoxCollider, { BoxColliderOptions } from "../main/BoxCollider";
+import BoxCollider, { BoxColliderOptions } from "../core/BoxCollider";
 import { AnimatedSprite, Assets, DestroyOptions, Point } from "pixi.js";
 import { collisionResponse } from "../utils/misc";
 import Squad from "./Squad";

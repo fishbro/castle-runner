@@ -1,5 +1,5 @@
 import { Container, DestroyOptions, Point, Sprite, Texture } from "pixi.js";
-import PixiApp from "./PixiApp";
+import PixiApp from "../main/PixiApp";
 
 export type BoxColliderOptions = {
     width?: number;
