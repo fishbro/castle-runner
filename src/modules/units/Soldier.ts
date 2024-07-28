@@ -1,6 +1,7 @@
 import BoxCollider, { BoxColliderOptions } from "../main/BoxCollider";
 import { AnimatedSprite, Assets, DestroyOptions, Point } from "pixi.js";
 import { collisionResponse } from "../utils/misc";
+import Squad from "./Squad";
 
 const anim_conf = {
     left: "horde_knight_run_left_45_v01",
@@ -11,20 +12,14 @@ const anim_conf = {
 type AnimType = "left" | "right" | "forward";
 
 export type SoldierOptions = BoxColliderOptions & {
-    width?: number;
-    height?: number;
-    tint?: number;
-    x?: number;
-    y?: number;
+    squad: Squad;
     acceleration?: Point;
     mass?: number;
-    isTarget?: boolean;
 };
 
 class Soldier extends BoxCollider {
     acceleration: Point;
     mass: number;
-    isTarget = false;
 
     curAnim: AnimType | null = null;
     animations: Map<AnimType, AnimatedSprite> = new Map();
@@ -34,8 +29,6 @@ class Soldier extends BoxCollider {
 
         this.acceleration = options.acceleration || new Point(0);
         this.mass = options.mass || 1;
-
-        if (options.isTarget) this.isTarget = true;
 
         this.addAnimations();
         this.setAnimation("forward");

@@ -1,5 +1,5 @@
 import Soldier from "./Soldier";
-import { Application, Point } from "pixi.js";
+import { Application, DestroyOptions, Point } from "pixi.js";
 import { distanceBetweenTwoPoints } from "../utils/misc";
 import BoxCollider, { BoxColliderOptions } from "../main/BoxCollider";
 
@@ -60,6 +60,7 @@ class Squad extends BoxCollider {
         } else {
             for (let i = 0; i < value - before; i++) {
                 const soldier = new Soldier({
+                    squad: this,
                     width: soldierSize,
                     height: soldierSize,
                     tint: 0xffffff,
@@ -125,6 +126,14 @@ class Squad extends BoxCollider {
         });
 
         // console.log(target);
+    }
+
+    destroy(options?: DestroyOptions) {
+        super.destroy(options);
+
+        this.soldiersList.forEach(
+            soldier => soldier.destroy && soldier.destroy()
+        );
     }
 }
 
