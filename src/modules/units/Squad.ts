@@ -1,16 +1,15 @@
 import Soldier from "./Soldier";
-import { Application, DestroyOptions, Point } from "pixi.js";
+import { DestroyOptions, Point, Texture } from "pixi.js";
 import { distanceBetweenTwoPoints } from "../utils/misc";
 import BoxCollider, { BoxColliderOptions } from "../main/BoxCollider";
 
 export type SquadOptions = BoxColliderOptions & {
-    app: Application;
     soldiers: number;
     target: Point;
+    debug?: boolean;
 };
 
 class Squad extends BoxCollider {
-    app: Application;
     soldierSize = 20;
     soldiersList: Soldier[] = [];
     target: Point;
@@ -20,22 +19,27 @@ class Squad extends BoxCollider {
     constructor(options: SquadOptions) {
         super(options);
 
-        this.app = options.app;
+        this.name = "Squad";
+
         this.target = options.target;
         this.curSoldiers = options.soldiers;
+
+        if (options.debug) {
+            this.boundary.texture = Texture.WHITE;
+            this.boundary.alpha = 0.5;
+            this.boundary.zIndex = 999999;
+        }
 
         this.init();
     }
 
     init() {
-        const { soldierSize, app } = this;
-        this.name = "Squad";
+        const { soldierSize } = this;
 
         this.boundary.width = soldierSize;
         this.boundary.height = soldierSize;
         this.boundary.tint = 0xffffff;
         this.boundary.anchor.set(0.5);
-        this.boundary.zIndex = 1000;
         this.boundary.x = this.target.x;
         this.boundary.y = this.target.y;
         this.addChild(this.boundary);
@@ -44,7 +48,7 @@ class Squad extends BoxCollider {
     _curSoldiers = 0;
 
     set curSoldiers(value: number) {
-        const { app, soldiersList, soldierSize } = this;
+        const { soldiersList, soldierSize } = this;
         const before = this._curSoldiers;
         this._curSoldiers = value;
 
