@@ -212,11 +212,11 @@ class RoadScene extends Scene {
                         pos: new Point(0.25, 0),
                         width: 0.5
                     },
-                    // {
-                    //     type: "enemy",
-                    //     value: 40,
-                    //     pos: new Point(0.5, 0.5)
-                    // },
+                    {
+                        type: "enemy",
+                        value: 40,
+                        pos: new Point(0.5, 0.5)
+                    },
                     {
                         type: "multiplier",
                         value: 2,
@@ -373,6 +373,19 @@ class RoadScene extends Scene {
             this.collisionObjects.splice(index, 1);
         }
     };
+
+    destroy() {
+        PixiApp.events.off("addCollisionObject", this.addCollisionObject);
+        PixiApp.events.off("removeCollisionObject", this.removeCollisionObject);
+
+        super.destroy();
+
+        this.road.destroy();
+        this.playerSquad?.destroy();
+        this.enemies.forEach(enemy => {
+            enemy.destroy();
+        });
+    }
 }
 
 export default RoadScene;
