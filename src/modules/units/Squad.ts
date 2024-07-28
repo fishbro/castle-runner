@@ -1,14 +1,15 @@
 import Soldier from "./Soldier";
-import { Application, Point, Sprite, Texture } from "pixi.js";
+import { Application, Point } from "pixi.js";
 import { distanceBetweenTwoPoints } from "../utils/misc";
+import BoxCollider, { BoxColliderOptions } from "../main/BoxCollider";
 
-type SquadOptions = {
+type SquadOptions = BoxColliderOptions & {
     app: Application;
     soldiers: number;
     target: Point;
 };
 
-class Squad {
+class Squad extends BoxCollider {
     app: Application;
     soldierSize = 20;
     soldiersList: Soldier[] = [];
@@ -16,9 +17,9 @@ class Squad {
     movementSpeed = 0.005;
     acceleration: Point = new Point(0);
 
-    boundary: Sprite = new Sprite(Texture.WHITE);
-
     constructor(options: SquadOptions) {
+        super(options);
+
         this.app = options.app;
         this.curSoldiers = options.soldiers;
         this.target = options.target;
@@ -52,7 +53,7 @@ class Squad {
             for (let i = 0; i < before - value; i++) {
                 const last = soldiersList.pop();
                 if (last) {
-                    last.destroy();
+                    last.markForDestroy();
                     app.stage.removeChild(last);
                 }
             }

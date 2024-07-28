@@ -107,15 +107,17 @@ class Soldier extends BoxCollider {
         }
     }
 
-    onCollide(collider: Soldier) {
+    onCollide(collider: BoxCollider) {
         super.onCollide(collider);
 
-        const collisionPush = collisionResponse(collider, this);
+        if (collider instanceof Soldier) {
+            const collisionPush = collisionResponse(collider, this);
 
-        this.acceleration.set(
-            this.acceleration.x + collisionPush.x * collider.mass,
-            this.acceleration.y + collisionPush.y * collider.mass
-        );
+            this.acceleration.set(
+                this.acceleration.x + collisionPush.x * collider.mass,
+                this.acceleration.y + collisionPush.y * collider.mass
+            );
+        }
     }
 
     destroy(options?: DestroyOptions) {

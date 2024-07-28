@@ -7,10 +7,12 @@ export type BoxColliderOptions = {
     tint?: number;
     x?: number;
     y?: number;
+    debug?: boolean;
 };
 
 class BoxCollider extends Container<any> {
     boundary: Sprite = new Sprite();
+    destroyed = false;
 
     constructor(options: BoxColliderOptions) {
         super(options);
@@ -19,6 +21,11 @@ class BoxCollider extends Container<any> {
 
         this.x = options.x || 0;
         this.y = options.y || 0;
+
+        if (options.debug) {
+            this.boundary.texture = Texture.WHITE;
+            this.boundary.zIndex = 999999;
+        }
 
         this.boundary.width = options.width || 0;
         this.boundary.height = options.height || 0;
@@ -38,6 +45,10 @@ class BoxCollider extends Container<any> {
     tickerUpdate(delta: number) {}
 
     onCollide(collider: BoxCollider) {}
+
+    markForDestroy() {
+        this.destroyed = true;
+    }
 
     destroy(options?: DestroyOptions) {
         PixiApp.events.emit("removeCollisionObject", this);

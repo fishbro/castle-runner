@@ -7,6 +7,8 @@ import {
     Sprite,
     Texture
 } from "pixi.js";
+import Trigger from "./Trigger";
+import Squad from "../units/Squad";
 
 type WayState = "start" | "way" | "pause" | "end";
 
@@ -62,23 +64,25 @@ class Way {
                     switch (obj.type) {
                         case "multiplier":
                             const { value, pos, width } = obj;
-                            const multiplier = new Container();
-                            objectsContainer.addChild(multiplier);
+                            const multiplier = new Trigger({
+                                width: waySprite.width * width,
+                                height: 100,
+                                tint: 0x00ff00,
+                                x: waySprite.width * pos.x,
+                                y: waySprite.height * pos.y * -1 + tileOffset,
+                                onTrigger: (trigger, collider) => {
+                                    if (collider instanceof Squad) {
+                                        collider.curSoldiers = Math.round(
+                                            collider.curSoldiers * value
+                                        );
+                                        return true;
+                                    }
 
-                            multiplier.zIndex = 10;
-                            multiplier.position.set(
-                                waySprite.width * pos.x,
-                                waySprite.height * pos.y * -1 + tileOffset
-                            );
-
-                            const objSprite = new Sprite({
-                                texture: Texture.WHITE
+                                    return false;
+                                },
+                                debug: true
                             });
-                            objSprite.anchor.set(0.5);
-                            objSprite.width = waySprite.width * width;
-                            objSprite.height = 100;
-
-                            multiplier.addChild(objSprite);
+                            objectsContainer.addChild(multiplier);
 
                             break;
 
@@ -113,7 +117,7 @@ class Way {
                 objects: [
                     {
                         type: "multiplier",
-                        value: 2,
+                        value: 0.5,
                         pos: new Point(0.75, 1),
                         width: 0.5
                     },

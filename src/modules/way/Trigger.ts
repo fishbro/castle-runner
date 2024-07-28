@@ -1,15 +1,33 @@
-import BoxCollider from "../main/BoxCollider";
+import BoxCollider, { BoxColliderOptions } from "../main/BoxCollider";
+import { DestroyOptions } from "pixi.js";
+
+export type TriggerOptions = BoxColliderOptions & {
+    onTrigger: (trigger: Trigger, collider: BoxCollider) => boolean;
+};
 
 class Trigger extends BoxCollider {
     interactive = true;
-    callback: () => void = () => {};
+    callback: (trigger: Trigger, collider: BoxCollider) => boolean;
 
-    onCollision = () => {
+    constructor(options: TriggerOptions) {
+        super(options);
+
+        this.callback = options.onTrigger;
+    }
+
+    onCollide = (collider: BoxCollider) => {
         if (this.interactive) {
-            this.interactive = false;
-            this.callback();
+            const isTriggered = this.callback(this, collider);
+            if (isTriggered) {
+                this.interactive = false;
+                this.markForDestroy();
+            }
         }
     };
+
+    destroy(options?: DestroyOptions) {
+        super.destroy(options);
+    }
 }
 
 export default Trigger;
