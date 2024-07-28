@@ -9,6 +9,8 @@ import {
 } from "pixi.js";
 import Trigger from "./Trigger";
 import Squad from "../units/Squad";
+import Gate from "./Gate";
+import BoxCollider from "../main/BoxCollider";
 
 type WayState = "start" | "way" | "pause" | "end";
 
@@ -61,34 +63,60 @@ class Way {
 
             if (objects) {
                 objects.forEach(obj => {
+                    const { value, pos, width } = obj;
+                    let options = {
+                        width: waySprite.width * width,
+                        height: 100,
+                        tint: 0x00ff00,
+                        x: waySprite.width * pos.x,
+                        y: waySprite.height * pos.y * -1 + tileOffset,
+                        onTrigger: (trigger: Trigger, collider: BoxCollider) =>
+                            true,
+                        text: ""
+                    };
                     switch (obj.type) {
                         case "multiplier":
-                            const { value, pos, width } = obj;
-                            const multiplier = new Trigger({
-                                width: waySprite.width * width,
-                                height: 100,
-                                tint: 0x00ff00,
-                                x: waySprite.width * pos.x,
-                                y: waySprite.height * pos.y * -1 + tileOffset,
-                                onTrigger: (trigger, collider) => {
+                            options = {
+                                ...options,
+                                text:
+                                    value >= 1
+                                        ? `* ${value}`
+                                        : `/ ${1 / value}`,
+                                onTrigger: (_trigger, collider) => {
                                     if (collider instanceof Squad) {
                                         collider.curSoldiers = Math.round(
                                             collider.curSoldiers * value
                                         );
                                         return true;
                                     }
-
                                     return false;
-                                },
-                                debug: true
-                            });
-                            objectsContainer.addChild(multiplier);
+                                }
+                            };
+
+                            break;
+
+                        case "increase":
+                            options = {
+                                ...options,
+                                text: value.toString(),
+                                onTrigger: (_trigger, collider) => {
+                                    if (collider instanceof Squad) {
+                                        collider.curSoldiers = Math.round(
+                                            collider.curSoldiers + value
+                                        );
+                                        return true;
+                                    }
+                                    return false;
+                                }
+                            };
 
                             break;
 
                         default:
                             break;
                     }
+                    const multiplier = new Gate(options);
+                    objectsContainer.addChild(multiplier);
                 });
             }
 
@@ -147,6 +175,29 @@ class Way {
                     {
                         type: "multiplier",
                         value: 2,
+                        pos: new Point(0.25, 1),
+                        width: 0.5
+                    }
+                ]
+            },
+            {
+                type: "way",
+                objects: [
+                    {
+                        type: "increase",
+                        value: +50,
+                        pos: new Point(0.25, 0),
+                        width: 0.5
+                    },
+                    {
+                        type: "increase",
+                        value: -20,
+                        pos: new Point(0.25, 0.5),
+                        width: 0.5
+                    },
+                    {
+                        type: "increase",
+                        value: +10,
                         pos: new Point(0.25, 1),
                         width: 0.5
                     }

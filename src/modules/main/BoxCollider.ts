@@ -24,6 +24,7 @@ class BoxCollider extends Container<any> {
 
         if (options.debug) {
             this.boundary.texture = Texture.WHITE;
+            this.boundary.alpha = 0.1;
             this.boundary.zIndex = 999999;
         }
 
