@@ -1,5 +1,5 @@
 import Trigger, { TriggerOptions } from "./Trigger";
-import { Sprite, Text, Texture } from "pixi.js";
+import { DestroyOptions, Sprite, Text, Texture } from "pixi.js";
 
 export type GateOptions = TriggerOptions & {
     text: string;
@@ -32,6 +32,13 @@ class Gate extends Trigger {
 
         text.anchor.set(0.5);
         this.addChild(text);
+    }
+
+    destroy(options?: DestroyOptions) {
+        super.destroy(options);
+
+        this.text.destroy();
+        this.gateSprite.destroy();
     }
 }
 
