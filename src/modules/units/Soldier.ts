@@ -18,6 +18,7 @@ export type SoldierOptions = BoxColliderOptions & {
 };
 
 class Soldier extends BoxCollider {
+    squad: Squad;
     acceleration: Point;
     mass: number;
 
@@ -27,6 +28,7 @@ class Soldier extends BoxCollider {
     constructor(options: SoldierOptions) {
         super(options);
 
+        this.squad = options.squad;
         this.acceleration = options.acceleration || new Point(0);
         this.mass = options.mass || 1;
 

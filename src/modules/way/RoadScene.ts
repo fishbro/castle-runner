@@ -1,12 +1,4 @@
-import {
-    Application,
-    Assets,
-    Container,
-    ContainerChild,
-    Point,
-    Sprite
-} from "pixi.js";
-import Squad from "../units/Squad";
+import { Assets, Container, ContainerChild, Point, Sprite } from "pixi.js";
 import Gate from "./Gate";
 import EnemySquad from "../units/EnemySquad";
 import BoxCollider from "../core/BoxCollider";
@@ -14,6 +6,7 @@ import PixiApp from "../main/PixiApp";
 import { distanceBetweenTwoPoints, testForAABB } from "../utils/misc";
 import Scene from "../main/Scene";
 import Soldier from "../units/Soldier";
+import PlayerSquad from "../units/PlayerSquad";
 
 type WayState = "start" | "way" | "pause" | "end";
 
@@ -29,7 +22,7 @@ class RoadScene extends Scene {
     scaleFactor = 1;
 
     soldierSpeed = 0.05;
-    playerSquad: Squad | null = null;
+    playerSquad: PlayerSquad | null = null;
     enemies: EnemySquad[] = [];
 
     constructor(app: PixiApp) {
@@ -92,7 +85,7 @@ class RoadScene extends Scene {
                                         ? `* ${value}`
                                         : `/ ${1 / value}`,
                                 onTrigger: (_trigger, collider) => {
-                                    if (collider instanceof Squad) {
+                                    if (collider instanceof PlayerSquad) {
                                         collider.curSoldiers = Math.round(
                                             collider.curSoldiers * value
                                         );
@@ -113,7 +106,7 @@ class RoadScene extends Scene {
                                 y: waySprite.height * pos.y * -1 + tileOffset,
                                 text: value.toString(),
                                 onTrigger: (_trigger, collider) => {
-                                    if (collider instanceof Squad) {
+                                    if (collider instanceof PlayerSquad) {
                                         collider.curSoldiers = Math.round(
                                             collider.curSoldiers + value
                                         );
@@ -165,7 +158,7 @@ class RoadScene extends Scene {
 
         symbol.addChild(road);
 
-        const playerSquad = (this.playerSquad = new Squad({
+        const playerSquad = (this.playerSquad = new PlayerSquad({
             soldiers: 1,
             target: new Point(
                 (app.app.screen.width * this.scaleFactor) / 2,
@@ -190,11 +183,11 @@ class RoadScene extends Scene {
                         pos: new Point(0.75, 1),
                         width: 0.5
                     },
-                    {
-                        type: "enemy",
-                        value: 40,
-                        pos: new Point(0.5, 0.5)
-                    },
+                    // {
+                    //     type: "enemy",
+                    //     value: 40,
+                    //     pos: new Point(0.5, 0.5)
+                    // },
                     {
                         type: "multiplier",
                         value: 2,
